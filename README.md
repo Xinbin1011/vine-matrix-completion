@@ -193,3 +193,7 @@ vines*, Linear Algebra and its Applications 418, 188–200.
 [TU Delft record](https://research.tudelft.nl/en/publications/completion-problem-with-partial-correlation-vines/).
 The original notebook's “2025” citation has been corrected to the publication
 year in this repository.
+
+## Licence
+
+Copyright (c) 2026 Xinbin (Max) Xu. Released under the [MIT licence](LICENSE).
