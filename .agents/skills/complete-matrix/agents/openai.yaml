@@ -1,0 +1,4 @@
+interface:
+  display_name: "Complete a matrix"
+  short_description: "Complete matrices and explore partial correlation vines"
+  default_prompt: "Use $complete-matrix to complete my matrix with maximum entropy and explain the vine edges."

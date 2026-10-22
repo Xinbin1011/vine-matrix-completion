@@ -1,0 +1,10 @@
+{
+  "kind": "covariance",
+  "matrix": [
+    [35, -25, null, 10, -15],
+    [-25, 52, 24, -31, null],
+    [null, 24, 38, -2, null],
+    [10, -31, -2, 30, null],
+    [-15, null, null, null, 46]
+  ]
+}

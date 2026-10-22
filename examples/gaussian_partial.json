@@ -1,0 +1,8 @@
+{
+  "kind": "correlation",
+  "method": "vine",
+  "strategy": "d-vine",
+  "order": [1, 2, 3],
+  "matrix": [[1, 0.5, null], [0.5, 1, 0.5], [null, 0.5, 1]],
+  "partials": [{"conditioned": [1, 3], "conditioning": [2], "value": 0.4}]
+}
