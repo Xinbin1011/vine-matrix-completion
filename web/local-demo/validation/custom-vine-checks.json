@@ -1,0 +1,19 @@
+{
+  "passed": true,
+  "editedVines": 90,
+  "dimensions": [
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "cycleWarnings": 90,
+  "proximityWarnings": 99,
+  "invalidApiCases": 10,
+  "maxdetComparisons": 78,
+  "unsupportedNonchordalCases": 12,
+  "maximumSourceRoundTripError": 5.551115123125783e-17,
+  "maximumMaxdetDifference": 0.0,
+  "sourceRoundTripIsOracleAssisted": true
+}

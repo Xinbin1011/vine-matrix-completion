@@ -12,7 +12,8 @@ Want to help improve it? [Add the project to Codex and contribute](#add-this-pro
 | --- | --- |
 | [Interactive demo](https://xinbin1011.github.io/vine-matrix-completion/) | Change inputs and inspect the calculation in your browser. Works when the project PC is switched off. |
 | [Read the conference notebook](https://xinbin1011.github.io/vine-matrix-completion/notebook.html) · [notebook source](notebooks/GIRO_2026_matrix_completion.ipynb) | Follow the workflow, function map and all four missing-correlation calculations using the Python package. |
-| [D10 slides](docs/resources/GIRO_2026_D10_slides.pdf) | The two-slide matrix-completion section selected for this package. |
+| [D17 graph slides · 1 November 2026](docs/resources/GIRO_2026_Matrix_Completion_Graph_D17_2026-11-01.pdf) · [D17 matrix slides · 1 November 2026](docs/resources/GIRO_2026_Matrix_Completion_Matrix_D17_2026-11-01.pdf) | Latest two-slide alternatives: graph or matrix presentation. |
+| [D10 slides (earlier version)](docs/resources/GIRO_2026_D10_slides.pdf) | Preserved at the original address so existing links still work. |
 | [Local Python demo](https://xinbin1011.github.io/vine-matrix-completion/resources/local-python-demo.zip) | Download, extract and follow START_HERE.txt for the local-server alternative. |
 
 The website loads Python, NumPy and NetworkX into a browser worker through
@@ -21,7 +22,7 @@ calculations then use the same package source as the notebook and local Python
 version. Input matrices stay in the browser. No model API or API key is used.
 
 The default demo uses rounded GIRO inputs; the original full-precision notebook
-example is labelled separately. The notebook, source package and D10 slides
+example is labelled separately. The notebook, source package and slides
 describe matrix completion, not an empirically calibrated insurance model.
 
 ## Use the package in a notebook
@@ -47,6 +48,12 @@ The underlying method is from published theory; browser presentation and
 additional validation used Codex assistance.
 
 ## Versions and preservation
+
+The [previous online demo](https://xinbin1011.github.io/vine-matrix-completion/versions/2026-11-01-before-ui-update/)
+preserves the complete public site before the 1 November interface update,
+including its browser solver and resource links. The current demo adds the staged
+settings, simple equations/matrix calculation views, lower colour legends,
+construction-rule notes and manual vine editor from the reviewed demo interface.
 
 The [previous repository version](https://github.com/Xinbin1011/vine-matrix-completion/tree/831dbe006b2f5b9cce7fff55bbe2baee7a4a1175)
 remains available in Git history. Original research notebooks, the prior demo

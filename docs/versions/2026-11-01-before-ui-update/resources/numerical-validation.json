@@ -1,0 +1,1276 @@
+{
+  "passed": true,
+  "cases": 214,
+  "maximumAbsoluteDifferences": {
+    "sourceRecovery": 5.551115123125783e-17,
+    "packageAgreement": 0.0,
+    "traceAgreement": 0.0,
+    "freshDiagnosticDifference": 0.0
+  },
+  "backendSha256": "2e7aacd1b3ee12d4199a8c172a439a945aeb22f095f67d8c5383a8ed152874e0",
+  "python": "3.12.14",
+  "numpy": "2.3.5",
+  "scope": "3\u20137 variables; arbitrary symmetric masks; greedy/C/D vines; explicit free partials; actual package core.",
+  "noSourceMatrixInBackendPayload": true,
+  "failures": [],
+  "results": [
+    {
+      "id": "vine-n3-seed71-all-greedy",
+      "passed": true,
+      "dimension": 3,
+      "freePairs": 0
+    },
+    {
+      "id": "vine-n3-seed71-all-c-vine",
+      "passed": true,
+      "dimension": 3,
+      "freePairs": 0
+    },
+    {
+      "id": "vine-n3-seed71-all-d-vine",
+      "passed": true,
+      "dimension": 3,
+      "freePairs": 0
+    },
+    {
+      "id": "maxdet-n3-seed71-all",
+      "passed": true,
+      "supported": true,
+      "dimension": 3
+    },
+    {
+      "id": "vine-n3-seed71-none-greedy",
+      "passed": true,
+      "dimension": 3,
+      "freePairs": 3
+    },
+    {
+      "id": "vine-n3-seed71-none-c-vine",
+      "passed": true,
+      "dimension": 3,
+      "freePairs": 3
+    },
+    {
+      "id": "vine-n3-seed71-none-d-vine",
+      "passed": true,
+      "dimension": 3,
+      "freePairs": 3
+    },
+    {
+      "id": "maxdet-n3-seed71-none",
+      "passed": true,
+      "supported": true,
+      "dimension": 3
+    },
+    {
+      "id": "vine-n3-seed71-chain-greedy",
+      "passed": true,
+      "dimension": 3,
+      "freePairs": 1
+    },
+    {
+      "id": "vine-n3-seed71-chain-c-vine",
+      "passed": true,
+      "dimension": 3,
+      "freePairs": 1
+    },
+    {
+      "id": "vine-n3-seed71-chain-d-vine",
+      "passed": true,
+      "dimension": 3,
+      "freePairs": 1
+    },
+    {
+      "id": "maxdet-n3-seed71-chain",
+      "passed": true,
+      "supported": true,
+      "dimension": 3
+    },
+    {
+      "id": "vine-n3-seed71-cycle-greedy",
+      "passed": true,
+      "dimension": 3,
+      "freePairs": 0
+    },
+    {
+      "id": "vine-n3-seed71-cycle-c-vine",
+      "passed": true,
+      "dimension": 3,
+      "freePairs": 0
+    },
+    {
+      "id": "vine-n3-seed71-cycle-d-vine",
+      "passed": true,
+      "dimension": 3,
+      "freePairs": 0
+    },
+    {
+      "id": "maxdet-n3-seed71-cycle",
+      "passed": true,
+      "supported": true,
+      "dimension": 3
+    },
+    {
+      "id": "vine-n3-seed71-random-greedy",
+      "passed": true,
+      "dimension": 3,
+      "freePairs": 2
+    },
+    {
+      "id": "vine-n3-seed71-random-c-vine",
+      "passed": true,
+      "dimension": 3,
+      "freePairs": 2
+    },
+    {
+      "id": "vine-n3-seed71-random-d-vine",
+      "passed": true,
+      "dimension": 3,
+      "freePairs": 2
+    },
+    {
+      "id": "maxdet-n3-seed71-random",
+      "passed": true,
+      "supported": true,
+      "dimension": 3
+    },
+    {
+      "id": "vine-n3-seed92-all-greedy",
+      "passed": true,
+      "dimension": 3,
+      "freePairs": 0
+    },
+    {
+      "id": "vine-n3-seed92-all-c-vine",
+      "passed": true,
+      "dimension": 3,
+      "freePairs": 0
+    },
+    {
+      "id": "vine-n3-seed92-all-d-vine",
+      "passed": true,
+      "dimension": 3,
+      "freePairs": 0
+    },
+    {
+      "id": "maxdet-n3-seed92-all",
+      "passed": true,
+      "supported": true,
+      "dimension": 3
+    },
+    {
+      "id": "vine-n3-seed92-none-greedy",
+      "passed": true,
+      "dimension": 3,
+      "freePairs": 3
+    },
+    {
+      "id": "vine-n3-seed92-none-c-vine",
+      "passed": true,
+      "dimension": 3,
+      "freePairs": 3
+    },
+    {
+      "id": "vine-n3-seed92-none-d-vine",
+      "passed": true,
+      "dimension": 3,
+      "freePairs": 3
+    },
+    {
+      "id": "maxdet-n3-seed92-none",
+      "passed": true,
+      "supported": true,
+      "dimension": 3
+    },
+    {
+      "id": "vine-n3-seed92-chain-greedy",
+      "passed": true,
+      "dimension": 3,
+      "freePairs": 1
+    },
+    {
+      "id": "vine-n3-seed92-chain-c-vine",
+      "passed": true,
+      "dimension": 3,
+      "freePairs": 1
+    },
+    {
+      "id": "vine-n3-seed92-chain-d-vine",
+      "passed": true,
+      "dimension": 3,
+      "freePairs": 1
+    },
+    {
+      "id": "maxdet-n3-seed92-chain",
+      "passed": true,
+      "supported": true,
+      "dimension": 3
+    },
+    {
+      "id": "vine-n3-seed92-cycle-greedy",
+      "passed": true,
+      "dimension": 3,
+      "freePairs": 0
+    },
+    {
+      "id": "vine-n3-seed92-cycle-c-vine",
+      "passed": true,
+      "dimension": 3,
+      "freePairs": 0
+    },
+    {
+      "id": "vine-n3-seed92-cycle-d-vine",
+      "passed": true,
+      "dimension": 3,
+      "freePairs": 0
+    },
+    {
+      "id": "maxdet-n3-seed92-cycle",
+      "passed": true,
+      "supported": true,
+      "dimension": 3
+    },
+    {
+      "id": "vine-n3-seed92-random-greedy",
+      "passed": true,
+      "dimension": 3,
+      "freePairs": 1
+    },
+    {
+      "id": "vine-n3-seed92-random-c-vine",
+      "passed": true,
+      "dimension": 3,
+      "freePairs": 1
+    },
+    {
+      "id": "vine-n3-seed92-random-d-vine",
+      "passed": true,
+      "dimension": 3,
+      "freePairs": 1
+    },
+    {
+      "id": "maxdet-n3-seed92-random",
+      "passed": true,
+      "supported": true,
+      "dimension": 3
+    },
+    {
+      "id": "vine-n4-seed71-all-greedy",
+      "passed": true,
+      "dimension": 4,
+      "freePairs": 0
+    },
+    {
+      "id": "vine-n4-seed71-all-c-vine",
+      "passed": true,
+      "dimension": 4,
+      "freePairs": 0
+    },
+    {
+      "id": "vine-n4-seed71-all-d-vine",
+      "passed": true,
+      "dimension": 4,
+      "freePairs": 0
+    },
+    {
+      "id": "maxdet-n4-seed71-all",
+      "passed": true,
+      "supported": true,
+      "dimension": 4
+    },
+    {
+      "id": "vine-n4-seed71-none-greedy",
+      "passed": true,
+      "dimension": 4,
+      "freePairs": 6
+    },
+    {
+      "id": "vine-n4-seed71-none-c-vine",
+      "passed": true,
+      "dimension": 4,
+      "freePairs": 6
+    },
+    {
+      "id": "vine-n4-seed71-none-d-vine",
+      "passed": true,
+      "dimension": 4,
+      "freePairs": 6
+    },
+    {
+      "id": "maxdet-n4-seed71-none",
+      "passed": true,
+      "supported": true,
+      "dimension": 4
+    },
+    {
+      "id": "vine-n4-seed71-chain-greedy",
+      "passed": true,
+      "dimension": 4,
+      "freePairs": 3
+    },
+    {
+      "id": "vine-n4-seed71-chain-c-vine",
+      "passed": true,
+      "dimension": 4,
+      "freePairs": 3
+    },
+    {
+      "id": "vine-n4-seed71-chain-d-vine",
+      "passed": true,
+      "dimension": 4,
+      "freePairs": 3
+    },
+    {
+      "id": "maxdet-n4-seed71-chain",
+      "passed": true,
+      "supported": true,
+      "dimension": 4
+    },
+    {
+      "id": "vine-n4-seed71-cycle-greedy",
+      "passed": true,
+      "dimension": 4,
+      "freePairs": 2
+    },
+    {
+      "id": "vine-n4-seed71-cycle-c-vine",
+      "passed": true,
+      "dimension": 4,
+      "freePairs": 2
+    },
+    {
+      "id": "vine-n4-seed71-cycle-d-vine",
+      "passed": true,
+      "dimension": 4,
+      "freePairs": 2
+    },
+    {
+      "id": "maxdet-n4-seed71-cycle",
+      "passed": true,
+      "supported": false
+    },
+    {
+      "id": "vine-n4-seed71-random-greedy",
+      "passed": true,
+      "dimension": 4,
+      "freePairs": 4
+    },
+    {
+      "id": "vine-n4-seed71-random-c-vine",
+      "passed": true,
+      "dimension": 4,
+      "freePairs": 4
+    },
+    {
+      "id": "vine-n4-seed71-random-d-vine",
+      "passed": true,
+      "dimension": 4,
+      "freePairs": 4
+    },
+    {
+      "id": "maxdet-n4-seed71-random",
+      "passed": true,
+      "supported": true,
+      "dimension": 4
+    },
+    {
+      "id": "vine-n4-seed92-all-greedy",
+      "passed": true,
+      "dimension": 4,
+      "freePairs": 0
+    },
+    {
+      "id": "vine-n4-seed92-all-c-vine",
+      "passed": true,
+      "dimension": 4,
+      "freePairs": 0
+    },
+    {
+      "id": "vine-n4-seed92-all-d-vine",
+      "passed": true,
+      "dimension": 4,
+      "freePairs": 0
+    },
+    {
+      "id": "maxdet-n4-seed92-all",
+      "passed": true,
+      "supported": true,
+      "dimension": 4
+    },
+    {
+      "id": "vine-n4-seed92-none-greedy",
+      "passed": true,
+      "dimension": 4,
+      "freePairs": 6
+    },
+    {
+      "id": "vine-n4-seed92-none-c-vine",
+      "passed": true,
+      "dimension": 4,
+      "freePairs": 6
+    },
+    {
+      "id": "vine-n4-seed92-none-d-vine",
+      "passed": true,
+      "dimension": 4,
+      "freePairs": 6
+    },
+    {
+      "id": "maxdet-n4-seed92-none",
+      "passed": true,
+      "supported": true,
+      "dimension": 4
+    },
+    {
+      "id": "vine-n4-seed92-chain-greedy",
+      "passed": true,
+      "dimension": 4,
+      "freePairs": 3
+    },
+    {
+      "id": "vine-n4-seed92-chain-c-vine",
+      "passed": true,
+      "dimension": 4,
+      "freePairs": 3
+    },
+    {
+      "id": "vine-n4-seed92-chain-d-vine",
+      "passed": true,
+      "dimension": 4,
+      "freePairs": 3
+    },
+    {
+      "id": "maxdet-n4-seed92-chain",
+      "passed": true,
+      "supported": true,
+      "dimension": 4
+    },
+    {
+      "id": "vine-n4-seed92-cycle-greedy",
+      "passed": true,
+      "dimension": 4,
+      "freePairs": 2
+    },
+    {
+      "id": "vine-n4-seed92-cycle-c-vine",
+      "passed": true,
+      "dimension": 4,
+      "freePairs": 2
+    },
+    {
+      "id": "vine-n4-seed92-cycle-d-vine",
+      "passed": true,
+      "dimension": 4,
+      "freePairs": 2
+    },
+    {
+      "id": "maxdet-n4-seed92-cycle",
+      "passed": true,
+      "supported": false
+    },
+    {
+      "id": "vine-n4-seed92-random-greedy",
+      "passed": true,
+      "dimension": 4,
+      "freePairs": 2
+    },
+    {
+      "id": "vine-n4-seed92-random-c-vine",
+      "passed": true,
+      "dimension": 4,
+      "freePairs": 2
+    },
+    {
+      "id": "vine-n4-seed92-random-d-vine",
+      "passed": true,
+      "dimension": 4,
+      "freePairs": 2
+    },
+    {
+      "id": "maxdet-n4-seed92-random",
+      "passed": true,
+      "supported": true,
+      "dimension": 4
+    },
+    {
+      "id": "vine-n5-seed71-all-greedy",
+      "passed": true,
+      "dimension": 5,
+      "freePairs": 0
+    },
+    {
+      "id": "vine-n5-seed71-all-c-vine",
+      "passed": true,
+      "dimension": 5,
+      "freePairs": 0
+    },
+    {
+      "id": "vine-n5-seed71-all-d-vine",
+      "passed": true,
+      "dimension": 5,
+      "freePairs": 0
+    },
+    {
+      "id": "maxdet-n5-seed71-all",
+      "passed": true,
+      "supported": true,
+      "dimension": 5
+    },
+    {
+      "id": "vine-n5-seed71-none-greedy",
+      "passed": true,
+      "dimension": 5,
+      "freePairs": 10
+    },
+    {
+      "id": "vine-n5-seed71-none-c-vine",
+      "passed": true,
+      "dimension": 5,
+      "freePairs": 10
+    },
+    {
+      "id": "vine-n5-seed71-none-d-vine",
+      "passed": true,
+      "dimension": 5,
+      "freePairs": 10
+    },
+    {
+      "id": "maxdet-n5-seed71-none",
+      "passed": true,
+      "supported": true,
+      "dimension": 5
+    },
+    {
+      "id": "vine-n5-seed71-chain-greedy",
+      "passed": true,
+      "dimension": 5,
+      "freePairs": 6
+    },
+    {
+      "id": "vine-n5-seed71-chain-c-vine",
+      "passed": true,
+      "dimension": 5,
+      "freePairs": 6
+    },
+    {
+      "id": "vine-n5-seed71-chain-d-vine",
+      "passed": true,
+      "dimension": 5,
+      "freePairs": 6
+    },
+    {
+      "id": "maxdet-n5-seed71-chain",
+      "passed": true,
+      "supported": true,
+      "dimension": 5
+    },
+    {
+      "id": "vine-n5-seed71-cycle-greedy",
+      "passed": true,
+      "dimension": 5,
+      "freePairs": 5
+    },
+    {
+      "id": "vine-n5-seed71-cycle-c-vine",
+      "passed": true,
+      "dimension": 5,
+      "freePairs": 5
+    },
+    {
+      "id": "vine-n5-seed71-cycle-d-vine",
+      "passed": true,
+      "dimension": 5,
+      "freePairs": 5
+    },
+    {
+      "id": "maxdet-n5-seed71-cycle",
+      "passed": true,
+      "supported": false
+    },
+    {
+      "id": "vine-n5-seed71-random-greedy",
+      "passed": true,
+      "dimension": 5,
+      "freePairs": 4
+    },
+    {
+      "id": "vine-n5-seed71-random-c-vine",
+      "passed": true,
+      "dimension": 5,
+      "freePairs": 4
+    },
+    {
+      "id": "vine-n5-seed71-random-d-vine",
+      "passed": true,
+      "dimension": 5,
+      "freePairs": 4
+    },
+    {
+      "id": "maxdet-n5-seed71-random",
+      "passed": true,
+      "supported": true,
+      "dimension": 5
+    },
+    {
+      "id": "vine-n5-seed92-all-greedy",
+      "passed": true,
+      "dimension": 5,
+      "freePairs": 0
+    },
+    {
+      "id": "vine-n5-seed92-all-c-vine",
+      "passed": true,
+      "dimension": 5,
+      "freePairs": 0
+    },
+    {
+      "id": "vine-n5-seed92-all-d-vine",
+      "passed": true,
+      "dimension": 5,
+      "freePairs": 0
+    },
+    {
+      "id": "maxdet-n5-seed92-all",
+      "passed": true,
+      "supported": true,
+      "dimension": 5
+    },
+    {
+      "id": "vine-n5-seed92-none-greedy",
+      "passed": true,
+      "dimension": 5,
+      "freePairs": 10
+    },
+    {
+      "id": "vine-n5-seed92-none-c-vine",
+      "passed": true,
+      "dimension": 5,
+      "freePairs": 10
+    },
+    {
+      "id": "vine-n5-seed92-none-d-vine",
+      "passed": true,
+      "dimension": 5,
+      "freePairs": 10
+    },
+    {
+      "id": "maxdet-n5-seed92-none",
+      "passed": true,
+      "supported": true,
+      "dimension": 5
+    },
+    {
+      "id": "vine-n5-seed92-chain-greedy",
+      "passed": true,
+      "dimension": 5,
+      "freePairs": 6
+    },
+    {
+      "id": "vine-n5-seed92-chain-c-vine",
+      "passed": true,
+      "dimension": 5,
+      "freePairs": 6
+    },
+    {
+      "id": "vine-n5-seed92-chain-d-vine",
+      "passed": true,
+      "dimension": 5,
+      "freePairs": 6
+    },
+    {
+      "id": "maxdet-n5-seed92-chain",
+      "passed": true,
+      "supported": true,
+      "dimension": 5
+    },
+    {
+      "id": "vine-n5-seed92-cycle-greedy",
+      "passed": true,
+      "dimension": 5,
+      "freePairs": 5
+    },
+    {
+      "id": "vine-n5-seed92-cycle-c-vine",
+      "passed": true,
+      "dimension": 5,
+      "freePairs": 5
+    },
+    {
+      "id": "vine-n5-seed92-cycle-d-vine",
+      "passed": true,
+      "dimension": 5,
+      "freePairs": 5
+    },
+    {
+      "id": "maxdet-n5-seed92-cycle",
+      "passed": true,
+      "supported": false
+    },
+    {
+      "id": "vine-n5-seed92-random-greedy",
+      "passed": true,
+      "dimension": 5,
+      "freePairs": 5
+    },
+    {
+      "id": "vine-n5-seed92-random-c-vine",
+      "passed": true,
+      "dimension": 5,
+      "freePairs": 5
+    },
+    {
+      "id": "vine-n5-seed92-random-d-vine",
+      "passed": true,
+      "dimension": 5,
+      "freePairs": 5
+    },
+    {
+      "id": "maxdet-n5-seed92-random",
+      "passed": true,
+      "supported": true,
+      "dimension": 5
+    },
+    {
+      "id": "vine-n6-seed71-all-greedy",
+      "passed": true,
+      "dimension": 6,
+      "freePairs": 0
+    },
+    {
+      "id": "vine-n6-seed71-all-c-vine",
+      "passed": true,
+      "dimension": 6,
+      "freePairs": 0
+    },
+    {
+      "id": "vine-n6-seed71-all-d-vine",
+      "passed": true,
+      "dimension": 6,
+      "freePairs": 0
+    },
+    {
+      "id": "maxdet-n6-seed71-all",
+      "passed": true,
+      "supported": true,
+      "dimension": 6
+    },
+    {
+      "id": "vine-n6-seed71-none-greedy",
+      "passed": true,
+      "dimension": 6,
+      "freePairs": 15
+    },
+    {
+      "id": "vine-n6-seed71-none-c-vine",
+      "passed": true,
+      "dimension": 6,
+      "freePairs": 15
+    },
+    {
+      "id": "vine-n6-seed71-none-d-vine",
+      "passed": true,
+      "dimension": 6,
+      "freePairs": 15
+    },
+    {
+      "id": "maxdet-n6-seed71-none",
+      "passed": true,
+      "supported": true,
+      "dimension": 6
+    },
+    {
+      "id": "vine-n6-seed71-chain-greedy",
+      "passed": true,
+      "dimension": 6,
+      "freePairs": 10
+    },
+    {
+      "id": "vine-n6-seed71-chain-c-vine",
+      "passed": true,
+      "dimension": 6,
+      "freePairs": 10
+    },
+    {
+      "id": "vine-n6-seed71-chain-d-vine",
+      "passed": true,
+      "dimension": 6,
+      "freePairs": 10
+    },
+    {
+      "id": "maxdet-n6-seed71-chain",
+      "passed": true,
+      "supported": true,
+      "dimension": 6
+    },
+    {
+      "id": "vine-n6-seed71-cycle-greedy",
+      "passed": true,
+      "dimension": 6,
+      "freePairs": 9
+    },
+    {
+      "id": "vine-n6-seed71-cycle-c-vine",
+      "passed": true,
+      "dimension": 6,
+      "freePairs": 9
+    },
+    {
+      "id": "vine-n6-seed71-cycle-d-vine",
+      "passed": true,
+      "dimension": 6,
+      "freePairs": 9
+    },
+    {
+      "id": "maxdet-n6-seed71-cycle",
+      "passed": true,
+      "supported": false
+    },
+    {
+      "id": "vine-n6-seed71-random-greedy",
+      "passed": true,
+      "dimension": 6,
+      "freePairs": 6
+    },
+    {
+      "id": "vine-n6-seed71-random-c-vine",
+      "passed": true,
+      "dimension": 6,
+      "freePairs": 6
+    },
+    {
+      "id": "vine-n6-seed71-random-d-vine",
+      "passed": true,
+      "dimension": 6,
+      "freePairs": 6
+    },
+    {
+      "id": "maxdet-n6-seed71-random",
+      "passed": true,
+      "supported": true,
+      "dimension": 6
+    },
+    {
+      "id": "vine-n6-seed92-all-greedy",
+      "passed": true,
+      "dimension": 6,
+      "freePairs": 0
+    },
+    {
+      "id": "vine-n6-seed92-all-c-vine",
+      "passed": true,
+      "dimension": 6,
+      "freePairs": 0
+    },
+    {
+      "id": "vine-n6-seed92-all-d-vine",
+      "passed": true,
+      "dimension": 6,
+      "freePairs": 0
+    },
+    {
+      "id": "maxdet-n6-seed92-all",
+      "passed": true,
+      "supported": true,
+      "dimension": 6
+    },
+    {
+      "id": "vine-n6-seed92-none-greedy",
+      "passed": true,
+      "dimension": 6,
+      "freePairs": 15
+    },
+    {
+      "id": "vine-n6-seed92-none-c-vine",
+      "passed": true,
+      "dimension": 6,
+      "freePairs": 15
+    },
+    {
+      "id": "vine-n6-seed92-none-d-vine",
+      "passed": true,
+      "dimension": 6,
+      "freePairs": 15
+    },
+    {
+      "id": "maxdet-n6-seed92-none",
+      "passed": true,
+      "supported": true,
+      "dimension": 6
+    },
+    {
+      "id": "vine-n6-seed92-chain-greedy",
+      "passed": true,
+      "dimension": 6,
+      "freePairs": 10
+    },
+    {
+      "id": "vine-n6-seed92-chain-c-vine",
+      "passed": true,
+      "dimension": 6,
+      "freePairs": 10
+    },
+    {
+      "id": "vine-n6-seed92-chain-d-vine",
+      "passed": true,
+      "dimension": 6,
+      "freePairs": 10
+    },
+    {
+      "id": "maxdet-n6-seed92-chain",
+      "passed": true,
+      "supported": true,
+      "dimension": 6
+    },
+    {
+      "id": "vine-n6-seed92-cycle-greedy",
+      "passed": true,
+      "dimension": 6,
+      "freePairs": 9
+    },
+    {
+      "id": "vine-n6-seed92-cycle-c-vine",
+      "passed": true,
+      "dimension": 6,
+      "freePairs": 9
+    },
+    {
+      "id": "vine-n6-seed92-cycle-d-vine",
+      "passed": true,
+      "dimension": 6,
+      "freePairs": 9
+    },
+    {
+      "id": "maxdet-n6-seed92-cycle",
+      "passed": true,
+      "supported": false
+    },
+    {
+      "id": "vine-n6-seed92-random-greedy",
+      "passed": true,
+      "dimension": 6,
+      "freePairs": 6
+    },
+    {
+      "id": "vine-n6-seed92-random-c-vine",
+      "passed": true,
+      "dimension": 6,
+      "freePairs": 6
+    },
+    {
+      "id": "vine-n6-seed92-random-d-vine",
+      "passed": true,
+      "dimension": 6,
+      "freePairs": 6
+    },
+    {
+      "id": "maxdet-n6-seed92-random",
+      "passed": true,
+      "supported": false
+    },
+    {
+      "id": "vine-n7-seed71-all-greedy",
+      "passed": true,
+      "dimension": 7,
+      "freePairs": 0
+    },
+    {
+      "id": "vine-n7-seed71-all-c-vine",
+      "passed": true,
+      "dimension": 7,
+      "freePairs": 0
+    },
+    {
+      "id": "vine-n7-seed71-all-d-vine",
+      "passed": true,
+      "dimension": 7,
+      "freePairs": 0
+    },
+    {
+      "id": "maxdet-n7-seed71-all",
+      "passed": true,
+      "supported": true,
+      "dimension": 7
+    },
+    {
+      "id": "vine-n7-seed71-none-greedy",
+      "passed": true,
+      "dimension": 7,
+      "freePairs": 21
+    },
+    {
+      "id": "vine-n7-seed71-none-c-vine",
+      "passed": true,
+      "dimension": 7,
+      "freePairs": 21
+    },
+    {
+      "id": "vine-n7-seed71-none-d-vine",
+      "passed": true,
+      "dimension": 7,
+      "freePairs": 21
+    },
+    {
+      "id": "maxdet-n7-seed71-none",
+      "passed": true,
+      "supported": true,
+      "dimension": 7
+    },
+    {
+      "id": "vine-n7-seed71-chain-greedy",
+      "passed": true,
+      "dimension": 7,
+      "freePairs": 15
+    },
+    {
+      "id": "vine-n7-seed71-chain-c-vine",
+      "passed": true,
+      "dimension": 7,
+      "freePairs": 15
+    },
+    {
+      "id": "vine-n7-seed71-chain-d-vine",
+      "passed": true,
+      "dimension": 7,
+      "freePairs": 15
+    },
+    {
+      "id": "maxdet-n7-seed71-chain",
+      "passed": true,
+      "supported": true,
+      "dimension": 7
+    },
+    {
+      "id": "vine-n7-seed71-cycle-greedy",
+      "passed": true,
+      "dimension": 7,
+      "freePairs": 14
+    },
+    {
+      "id": "vine-n7-seed71-cycle-c-vine",
+      "passed": true,
+      "dimension": 7,
+      "freePairs": 14
+    },
+    {
+      "id": "vine-n7-seed71-cycle-d-vine",
+      "passed": true,
+      "dimension": 7,
+      "freePairs": 14
+    },
+    {
+      "id": "maxdet-n7-seed71-cycle",
+      "passed": true,
+      "supported": false
+    },
+    {
+      "id": "vine-n7-seed71-random-greedy",
+      "passed": true,
+      "dimension": 7,
+      "freePairs": 10
+    },
+    {
+      "id": "vine-n7-seed71-random-c-vine",
+      "passed": true,
+      "dimension": 7,
+      "freePairs": 10
+    },
+    {
+      "id": "vine-n7-seed71-random-d-vine",
+      "passed": true,
+      "dimension": 7,
+      "freePairs": 10
+    },
+    {
+      "id": "maxdet-n7-seed71-random",
+      "passed": true,
+      "supported": false
+    },
+    {
+      "id": "vine-n7-seed92-all-greedy",
+      "passed": true,
+      "dimension": 7,
+      "freePairs": 0
+    },
+    {
+      "id": "vine-n7-seed92-all-c-vine",
+      "passed": true,
+      "dimension": 7,
+      "freePairs": 0
+    },
+    {
+      "id": "vine-n7-seed92-all-d-vine",
+      "passed": true,
+      "dimension": 7,
+      "freePairs": 0
+    },
+    {
+      "id": "maxdet-n7-seed92-all",
+      "passed": true,
+      "supported": true,
+      "dimension": 7
+    },
+    {
+      "id": "vine-n7-seed92-none-greedy",
+      "passed": true,
+      "dimension": 7,
+      "freePairs": 21
+    },
+    {
+      "id": "vine-n7-seed92-none-c-vine",
+      "passed": true,
+      "dimension": 7,
+      "freePairs": 21
+    },
+    {
+      "id": "vine-n7-seed92-none-d-vine",
+      "passed": true,
+      "dimension": 7,
+      "freePairs": 21
+    },
+    {
+      "id": "maxdet-n7-seed92-none",
+      "passed": true,
+      "supported": true,
+      "dimension": 7
+    },
+    {
+      "id": "vine-n7-seed92-chain-greedy",
+      "passed": true,
+      "dimension": 7,
+      "freePairs": 15
+    },
+    {
+      "id": "vine-n7-seed92-chain-c-vine",
+      "passed": true,
+      "dimension": 7,
+      "freePairs": 15
+    },
+    {
+      "id": "vine-n7-seed92-chain-d-vine",
+      "passed": true,
+      "dimension": 7,
+      "freePairs": 15
+    },
+    {
+      "id": "maxdet-n7-seed92-chain",
+      "passed": true,
+      "supported": true,
+      "dimension": 7
+    },
+    {
+      "id": "vine-n7-seed92-cycle-greedy",
+      "passed": true,
+      "dimension": 7,
+      "freePairs": 14
+    },
+    {
+      "id": "vine-n7-seed92-cycle-c-vine",
+      "passed": true,
+      "dimension": 7,
+      "freePairs": 14
+    },
+    {
+      "id": "vine-n7-seed92-cycle-d-vine",
+      "passed": true,
+      "dimension": 7,
+      "freePairs": 14
+    },
+    {
+      "id": "maxdet-n7-seed92-cycle",
+      "passed": true,
+      "supported": false
+    },
+    {
+      "id": "vine-n7-seed92-random-greedy",
+      "passed": true,
+      "dimension": 7,
+      "freePairs": 5
+    },
+    {
+      "id": "vine-n7-seed92-random-c-vine",
+      "passed": true,
+      "dimension": 7,
+      "freePairs": 5
+    },
+    {
+      "id": "vine-n7-seed92-random-d-vine",
+      "passed": true,
+      "dimension": 7,
+      "freePairs": 5
+    },
+    {
+      "id": "maxdet-n7-seed92-random",
+      "passed": true,
+      "supported": false
+    },
+    {
+      "id": "reference-values-and-known-zero",
+      "passed": true,
+      "defaultR13": 0.25,
+      "explicitR13": 0.55
+    },
+    {
+      "id": "incompatible-and-missing-partials",
+      "passed": true
+    },
+    {
+      "id": "reject-dimension",
+      "passed": true,
+      "errorType": "ValueError"
+    },
+    {
+      "id": "reject-non-square",
+      "passed": true,
+      "errorType": "ValueError"
+    },
+    {
+      "id": "reject-missing-diagonal",
+      "passed": true,
+      "errorType": "ValueError"
+    },
+    {
+      "id": "reject-asymmetric-mask",
+      "passed": true,
+      "errorType": "ValueError"
+    },
+    {
+      "id": "reject-asymmetric-values",
+      "passed": true,
+      "errorType": "ValueError"
+    },
+    {
+      "id": "reject-non-unit-diagonal",
+      "passed": true,
+      "errorType": "ValueError"
+    },
+    {
+      "id": "reject-invalid-order",
+      "passed": true,
+      "errorType": "ValueError"
+    },
+    {
+      "id": "reject-invalid-partial",
+      "passed": true,
+      "errorType": "ValueError"
+    },
+    {
+      "id": "reject-maxdet-extra-partial",
+      "passed": true,
+      "errorType": "ValueError"
+    },
+    {
+      "id": "reject-source-not-accepted",
+      "passed": true,
+      "errorType": "ValueError"
+    },
+    {
+      "id": "reject-bad-specified-clique",
+      "passed": true,
+      "errorType": "ValueError"
+    },
+    {
+      "id": "nonchordal-cliques-do-not-prove-feasibility",
+      "passed": true
+    }
+  ]
+}

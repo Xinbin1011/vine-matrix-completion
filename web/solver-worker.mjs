@@ -2,6 +2,8 @@
 import { loadPyodide } from "https://cdn.jsdelivr.net/pyodide/v314.0.7/full/pyodide.mjs";
 
 const base = new URL("./", import.meta.url);
+const archiveUrl = new URL("solver-python.zip", base);
+archiveUrl.search = new URL(import.meta.url).search;
 let runtimePromise;
 let queue = Promise.resolve();
 
@@ -9,7 +11,7 @@ async function runtime() {
   if (!runtimePromise) runtimePromise = (async () => {
     const python = await loadPyodide();
     await python.loadPackage(["numpy", "networkx"]);
-    const response = await fetch(new URL("solver-python.zip", base));
+    const response = await fetch(archiveUrl);
     if (!response.ok) throw new Error("The solver package could not be downloaded.");
     python.unpackArchive(await response.arrayBuffer(), "zip", { extractDir: "/app" });
     python.runPython("import sys\nsys.path.insert(0, '/app/employer-demo')\nfrom backend import analyse\nimport json");

@@ -49,7 +49,7 @@ def _json_safe(value):
 def _settings(payload):
     if not isinstance(payload, dict):
         raise ValueError("Send a JSON object containing the matrix and calculation settings.")
-    unknown = set(payload) - {"matrix", "method", "strategy", "order", "partials", "action"}
+    unknown = set(payload) - {"matrix", "method", "strategy", "order", "partials", "action", "custom_trees"}
     if unknown:
         raise ValueError("Unsupported payload fields: " + ", ".join(sorted(unknown)))
     matrix = payload.get("matrix")
@@ -67,8 +67,8 @@ def _settings(payload):
     action = payload.get("action", "complete")
     if method not in {"max_entropy", "vine"}:
         raise ValueError("method must be 'max_entropy' or 'vine'.")
-    if strategy not in {"greedy", "c-vine", "d-vine"}:
-        raise ValueError("strategy must be 'greedy', 'c-vine' or 'd-vine'.")
+    if strategy not in {"greedy", "c-vine", "d-vine", "custom"}:
+        raise ValueError("strategy must be 'greedy', 'c-vine', 'd-vine' or 'custom'.")
     if action not in {"plan", "complete"}:
         raise ValueError("action must be 'plan' or 'complete'.")
     order = payload.get("order", list(range(1, len(matrix) + 1)))
@@ -76,6 +76,25 @@ def _settings(payload):
         raise ValueError("order must list each integer variable label exactly once.")
     if set(order) != set(range(1, len(matrix) + 1)):
         raise ValueError("order must be a permutation of the 1-based variable labels.")
+    custom_trees = payload.get("custom_trees")
+    if strategy != "custom" and "custom_trees" in payload:
+        raise ValueError("custom_trees requires strategy='custom'.")
+    if strategy == "custom":
+        if not isinstance(custom_trees, list) or len(custom_trees) != len(matrix) - 1:
+            raise ValueError("custom_trees must supply every one of the n−1 trees.")
+        for level, edges in enumerate(custom_trees):
+            if not isinstance(edges, list) or len(edges) > len(matrix) - level - 1:
+                raise ValueError(f"Tree {level + 1} has too many connections or is not an edge array.")
+            for edge in edges:
+                if (not isinstance(edge, dict) or "conditioned" not in edge
+                        or set(edge) - {"conditioned", "conditioning"}):
+                    raise ValueError("Custom edges need conditioned and optional conditioning fields only.")
+                pair, cond = edge["conditioned"], edge.get("conditioning", [])
+                if (not isinstance(pair, list) or not isinstance(cond, list)
+                        or len(pair) != 2 or len(cond) != level
+                        or any(type(v) is not int or v not in order for v in [*pair, *cond])
+                        or len(set([*pair, *cond])) != level + 2):
+                    raise ValueError(f"Invalid conditioned/conditioning labels in tree {level + 1}.")
     partials = payload.get("partials", [])
     if not isinstance(partials, list) or any(not isinstance(item, dict) for item in partials):
         raise ValueError("partials must be an array of conditioned/conditioning/value records.")
@@ -86,7 +105,7 @@ def _settings(payload):
             raise ValueError("Partial conditioned and conditioning labels must be arrays.")
         if isinstance(item["value"], bool) or not isinstance(item["value"], (int, float)):
             raise ValueError("A supplied partial correlation must be a finite number in (-1, 1).")
-    return matrix, method, strategy, action, order, partials
+    return matrix, method, strategy, action, order, partials, custom_trees
 
 
 def _input_diagnostics(r, graph):
@@ -251,7 +270,7 @@ def analyse(payload):
     response = {"ok": False, "inputDiagnostics": {"structurallyValid": False},
                 "graph": None, "plan": None, "result": None, "trace": [], "error": None}
     try:
-        matrix, method, strategy, action, order, partials = _settings(payload)
+        matrix, method, strategy, action, order, partials, custom_trees = _settings(payload)
         r, _ = to_correlation(matrix, "correlation", TOL)
         graph = matrix_to_graph(r)
         response["inputDiagnostics"] = _input_diagnostics(r, graph)
@@ -264,7 +283,7 @@ def analyse(payload):
                                   "message": "Null marks an unknown entry. A supplied zero remains a fixed observed edge."})
         if not response["inputDiagnostics"]["allSpecifiedCliquesPD"]:
             raise ValueError(response["inputDiagnostics"]["globalFeasibility"]["explanation"])
-        vine = build_vine(r, strategy, order)
+        vine = build_vine(r, strategy, order, custom_trees=custom_trees)
         response["plan"] = _plan(vine, r, method, action, order)
         supplied = _normalize_partials(partials, vine)
         if method == "max_entropy" and supplied:
@@ -287,6 +306,7 @@ def analyse(payload):
             traced = _trace_vine(r, vine, supplied, response["trace"])
         result = complete_matrix(matrix, kind="correlation", method=method,
                                  strategy=strategy, order=order, partials=partials,
+                                 custom_trees=custom_trees,
                                  missing="error", tol=TOL)
         trace_difference = float(np.max(np.abs(traced - result.correlation)))
         if trace_difference > TOL * 10:

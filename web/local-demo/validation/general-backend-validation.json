@@ -7,7 +7,7 @@
     "traceAgreement": 0.0,
     "freshDiagnosticDifference": 0.0
   },
-  "backendSha256": "2e7aacd1b3ee12d4199a8c172a439a945aeb22f095f67d8c5383a8ed152874e0",
+  "backendSha256": "72acf7076844f4f95b73b67c5fab70de3f110793d3f59ffabad7d1394dc89c0c",
   "python": "3.12.14",
   "numpy": "2.3.5",
   "scope": "3\u20137 variables; arbitrary symmetric masks; greedy/C/D vines; explicit free partials; actual package core.",

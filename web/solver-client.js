@@ -1,6 +1,8 @@
 /* The public site computes in a worker. It never calls localhost or /api/analyse. */
 (function () {
   "use strict";
+  const workerUrl = new URL('solver-worker.mjs', document.baseURI);
+  workerUrl.search = new URL(document.currentScript.src).search;
   let worker, nextId = 0;
   const pending = new Map();
   function connection(message) {
@@ -22,7 +24,7 @@
       return new Promise((resolve, reject) => {
         if (!worker) {
           connection('Loading browser solver…');
-          worker = new Worker(new URL('solver-worker.mjs', document.baseURI), { type: 'module' });
+          worker = new Worker(workerUrl, { type: 'module' });
           worker.onmessage = ({ data }) => {
             const request = pending.get(data.id);
             if (!request) return;

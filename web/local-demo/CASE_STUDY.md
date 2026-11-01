@@ -4,7 +4,7 @@ Vine Copulas Working Party. Team members: Tim Harrison, Paul Hewson and Xinbin X
 
 Generate a seeded, positive definite 3–7 variable correlation matrix, or paste and edit your own. Hide pairs manually or randomly, then follow the observed graph, vine, partial-correlation assignments and reconstructed matrix. Choose the completion policy, vine strategy, order and free partial correlations. Supplied zeros remain observations; edits to known entries change the constraints.
 
-The public browser demo and local Python alternative use the same Python package. A generated reference is withheld from the solver and used only for optional comparison. Agreement with it is an experiment, not guaranteed recovery or calibrated truth.
+The local browser preview uses the Python package. A generated reference is withheld from the solver and used only for optional comparison. Agreement with it is an experiment, not guaranteed recovery or calibrated truth.
 
 ## Optional 5×5 example
 
@@ -21,7 +21,7 @@ The correlation matrix is positive definite: minimum eigenvalue **0.0670128560**
 
 These numerical checks support this example. The package’s maximum-determinant solver requires a chordal graph; incompatible assumptions can be rejected. Arbitrary greedy vines do not establish the theorem's m-saturation conditions. Gaussian entropy requires Gaussianity and fixed variances. No empirical insurance or tail-dependence validation is claimed.
 
-Theory: Kurowicka and Cooke (2006). Computational sources: the conference [notebook](https://xinbin1011.github.io/vine-matrix-completion/resources/GIRO_2026_matrix_completion.ipynb), [GIRO 2026 slides (D10)](https://xinbin1011.github.io/vine-matrix-completion/resources/GIRO_2026_D10_slides.pdf) and [extracted package](https://github.com/Xinbin1011/vine-matrix-completion). Browser presentation and additional validation used Codex assistance.
+Theory: Kurowicka and Cooke (2006). Computational sources: the unchanged research [notebook](../5x5%20Matrix%20Completion.ipynb), [GIRO process slides](../Vine_Copulas__GIRO_2026.pdf) and [extracted package](https://github.com/Xinbin1011/vine-matrix-completion). Validation and this unpublished local presentation use Codex assistance.
 
 ## Technical summary
 
@@ -30,4 +30,3 @@ The demonstration separates observed correlations from added completion assumpti
 In the three-variable example, \(\rho_{12}=\rho_{23}=0.5\) and the chosen partial correlation \(\rho_{13\cdot2}=0.4\) imply \(\rho_{13}=0.55\). Maximum determinant under only the two observed correlations instead gives \(\rho_{13}=0.25\). The distinction is the additional assumption.
 
 A completed correlation matrix does not identify margins or a copula family. Business implications require the wider dependence model.
-

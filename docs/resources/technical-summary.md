@@ -21,7 +21,7 @@ The correlation matrix is positive definite: minimum eigenvalue **0.0670128560**
 
 These numerical checks support this example. The package’s maximum-determinant solver requires a chordal graph; incompatible assumptions can be rejected. Arbitrary greedy vines do not establish the theorem's m-saturation conditions. Gaussian entropy requires Gaussianity and fixed variances. No empirical insurance or tail-dependence validation is claimed.
 
-Theory: Kurowicka and Cooke (2006). Computational sources: the conference [notebook](https://xinbin1011.github.io/vine-matrix-completion/resources/GIRO_2026_matrix_completion.ipynb), [GIRO 2026 slides (D10)](https://xinbin1011.github.io/vine-matrix-completion/resources/GIRO_2026_D10_slides.pdf) and [extracted package](https://github.com/Xinbin1011/vine-matrix-completion). Browser presentation and additional validation used Codex assistance.
+Theory: Kurowicka and Cooke (2006). Computational sources: the conference [notebook](GIRO_2026_matrix_completion.ipynb), [GIRO 2026 slides (D10)](GIRO_2026_D10_slides.pdf) and [extracted package](https://github.com/Xinbin1011/vine-matrix-completion). Browser presentation and additional validation used Codex assistance.
 
 ## Technical summary
 
@@ -31,3 +31,5 @@ In the three-variable example, \(\rho_{12}=\rho_{23}=0.5\) and the chosen partia
 
 A completed correlation matrix does not identify margins or a copula family. Business implications require the wider dependence model.
 
+
+Latest slides (1 November 2026): [D17 graph slides · 1 Nov 2026](GIRO_2026_Matrix_Completion_Graph_D17_2026-11-01.pdf) · [D17 matrix slides · 1 Nov 2026](GIRO_2026_Matrix_Completion_Matrix_D17_2026-11-01.pdf). The [earlier D10 slides](GIRO_2026_D10_slides.pdf) remain available.

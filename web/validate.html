@@ -18,7 +18,7 @@ document.querySelector('#run').onclick = async () => {
   if(a!==b)throw Error(path+': '+a+' != '+b);
  }
  try{
-  const cases=await(await fetch('browser-cases.json')).json();
+  const cases=[...await(await fetch('browser-cases.json')).json(), ...await(await fetch('custom-browser-cases.json')).json()];
   for(const test of cases){report.textContent='Running '+test.name+' ('+completed+'/'+cases.length+')';try{compare(await request(test.payload),test.expected);}catch(error){failures.push({name:test.name,error:error.message});}completed++;}
   report.textContent=JSON.stringify({passed:failures.length===0,cases:completed,maxDifference,seconds:(performance.now()-start)/1000,failures},null,2);
  }catch(error){report.textContent=JSON.stringify({passed:false,cases:completed,error:error.message},null,2);}finally{worker.terminate();document.querySelector('#run').disabled=false;}
