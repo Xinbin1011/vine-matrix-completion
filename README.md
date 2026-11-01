@@ -6,6 +6,8 @@ Complete an incomplete correlation or covariance matrix while preserving the
 supplied entries. Inspect the observed graph, vine, partial-correlation
 assumptions, numerical reconstruction and validity checks.
 
+Want to help improve it? [Add the project to Codex and contribute](#add-this-project-to-codex-and-contribute).
+
 | Resource | Use |
 | --- | --- |
 | [Interactive demo](https://xinbin1011.github.io/vine-matrix-completion/) | Change inputs and inspect the calculation in your browser. Works when the project PC is switched off. |
@@ -68,15 +70,60 @@ Open `http://127.0.0.1:8000/`. This exercises the browser solver, without a Pyth
 calculation endpoint. `web/local-demo` is the reviewed source snapshot used to
 build the site; the separately maintained working UI is not overwritten.
 
-## Start with Codex
+## Add this project to Codex and contribute
 
-1. Clone this repository and open its folder as a project in Codex.
-2. Ask:
+You need Git, Python 3.10 or later, and access to Codex. Contributions are submitted
+as pull requests for review.
+
+1. **Fork this repository** to your own GitHub account using
+   [Fork](https://github.com/Xinbin1011/vine-matrix-completion/fork).
+2. **Clone your fork and create a branch.** Replace `YOUR-USERNAME` below:
+
+   ```bash
+   git clone https://github.com/YOUR-USERNAME/vine-matrix-completion.git
+   cd vine-matrix-completion
+   git switch -c my-improvement
+   ```
+
+3. **Open the cloned folder in Codex.** In the desktop app, create or open a local
+   project. Use its project menu → **Edit project → Add folder**, select the cloned
+   `vine-matrix-completion` folder, and make it the **primary folder**. Start a new
+   chat inside that project. In an IDE, open the cloned folder before starting
+   Codex; with the CLI, run `codex` from that directory.
+   See [OpenAI's project instructions](https://learn.chatgpt.com/docs/projects).
+4. **Give Codex a specific contribution task.** For example:
+
+   > Read AGENTS.md, README.md and the GIRO notebook. Set up a local Python virtual
+   > environment and install this repository with the dev and plot extras.
+   > Help me improve [describe one change]. Explain the approach, make the change,
+   > preserve the supplied matrix entries and project notation, run the relevant
+   > checks, and show me the diff.
+
+   The setup command, after activating the environment, is
+   `python -m pip install -e ".[dev,plot]"`.
+   [Manual setup commands](#install-and-run-directly) are below.
+5. **Check and review the change.** Run `python -m pytest` for numerical-code
+   changes. For notebook changes, run the affected cells and inspect their outputs.
+   For demo changes, check the affected browser workflow. Include the results in
+   your pull request.
+6. **Commit and push the branch to your fork**, using your Git tools or asking
+   Codex to help. Open a pull request from that branch into
+   **`Xinbin1011/vine-matrix-completion` → `main`**. Describe what changed, why, and
+   how you checked it. A fork does not require write access to this repository.
+
+Useful first contributions include clearer notebook explanations, new worked
+examples, browser usability improvements and tests for a reported problem.
+
+### Try the included matrix-completion skill
+
+The repository includes `AGENTS.md` and `.agents/skills/complete-matrix/SKILL.md`.
+Opening the cloned folder gives Codex the project instructions and repository
+skill. Ask:
 
    > Use $complete-matrix to complete examples/five_by_five.json. Show the trees,
    > use maximum entropy by default, and explain the missing entries.
 
-3. Continue in the same conversation:
+Continue in the same conversation:
 
    > Try a D-vine with order 5,1,2,4,3. Show which partial correlations are free.
 
@@ -89,8 +136,8 @@ The last request needs a vine containing that particular edge; Codex checks the
 plan first. For a worked three-variable example, use
 [`examples/gaussian_partial.json`](examples/gaussian_partial.json).
 
-Codex discovers the skill in `.agents/skills/complete-matrix/`. If it does not
-appear, reopen the project/restart Codex. See the
+Codex discovers repository skills under `.agents/skills`. If the skill does not
+appear, restart Codex. See the
 [official skill documentation](https://learn.chatgpt.com/docs/build-skills).
 The repository must be available in a Python-capable Codex environment; pasting
 its GitHub URL into a chat alone does not install or execute the package.
