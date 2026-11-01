@@ -1,13 +1,63 @@
-# Vine matrix completion
+# GIRO 2026 · Matrix completion with partial correlation vines
 
-Complete a partially specified correlation or covariance matrix, inspect its
-partial correlation vine, and explore alternative trees and edge assumptions
-with Codex.
+**Team members: Tim Harrison, Paul Hewson and Xinbin Xu.**
 
-Based on **Xinbin (Max) Xu's `5x5 Matrix Completion.py`**. The numerical functions
-are organized into importable modules, with a command-line interface and a
-repository-local Codex skill. Your own Codex runs the Python tools and explains
-the results. The package makes no model API calls and needs no separate API key.
+Complete an incomplete correlation or covariance matrix while preserving the
+supplied entries. Inspect the observed graph, vine, partial-correlation
+assumptions, numerical reconstruction and validity checks.
+
+| Resource | Use |
+| --- | --- |
+| [Interactive demo](https://xinbin1011.github.io/vine-matrix-completion/) | Change inputs and inspect the calculation in your browser. Works when the project PC is switched off. |
+| [Read the conference notebook](https://xinbin1011.github.io/vine-matrix-completion/notebook.html) · [notebook source](notebooks/GIRO_2026_matrix_completion.ipynb) | Reproduce the GIRO example using the Python package. |
+| [D10 slides](docs/resources/GIRO_2026_D10_slides.pdf) | The two-slide matrix-completion section selected for this package. |
+| [Local Python demo](https://xinbin1011.github.io/vine-matrix-completion/resources/local-python-demo.zip) | Download, extract and follow START_HERE.txt for the local-server alternative. |
+
+The website loads Python, NumPy and NetworkX into a browser worker through
+Pyodide. Its first load needs an internet connection and downloads the runtime;
+calculations then use the same package source as the notebook and local Python
+version. Input matrices stay in the browser. No model API or API key is used.
+
+The default demo uses rounded GIRO inputs; the original full-precision notebook
+example is labelled separately. The notebook, source package and D10 slides
+describe matrix completion, not an empirically calibrated insurance model.
+
+## Use the package in a notebook
+
+After installing this repository, import the functions instead of copying them:
+
+```python
+from vine_completion import complete_matrix
+
+result = complete_matrix(matrix, kind="covariance", method="max_entropy")
+result.matrix         # completed covariance matrix
+result.diagnostics   # numerical checks
+```
+
+See [the conference notebook](notebooks/GIRO_2026_matrix_completion.ipynb) for
+the supplied entries, explicit vine assumptions and a complete worked result.
+The underlying method is from published theory; browser presentation and
+additional validation used Codex assistance.
+
+## Versions and preservation
+
+The [previous repository version](https://github.com/Xinbin1011/vine-matrix-completion/tree/831dbe006b2f5b9cce7fff55bbe2baee7a4a1175)
+remains available in Git history. Original research notebooks, the prior demo
+and slide revisions were also preserved in a dated local archive before this
+update. [Resource provenance](docs/resources/versions.json) records the baseline
+hashes. D10 is included unchanged; the full team deck and Overleaf project are
+maintained separately.
+
+## Build and run the browser site locally
+
+```text
+python tools/build_giro_site.py
+python -m http.server 8000 --bind 127.0.0.1 --directory docs
+```
+
+Open `http://127.0.0.1:8000/`. This exercises the browser solver, without a Python
+calculation endpoint. `web/local-demo` is the reviewed source snapshot used to
+build the site; the separately maintained working UI is not overwritten.
 
 ## Start with Codex
 
@@ -196,4 +246,4 @@ year in this repository.
 
 ## Licence
 
-Copyright (c) 2026 Xinbin (Max) Xu. Released under the [MIT licence](LICENSE).
+Copyright (c) 2026 Xinbin Xu. Released under the [MIT licence](LICENSE).

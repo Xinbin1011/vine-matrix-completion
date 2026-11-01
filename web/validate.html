@@ -1,0 +1,26 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><title>Browser solver cross-runtime checks</title>
+<h1>Browser solver cross-runtime checks</h1><button id="run">Run checks</button><pre id="report">Ready</pre>
+<script type="module">
+const report = document.querySelector('#report');
+document.querySelector('#run').onclick = async () => {
+ document.querySelector('#run').disabled = true;
+ const start = performance.now(), failures = []; let maxDifference = 0, completed = 0;
+ const worker = new Worker('../docs/solver-worker.mjs', {type:'module'});
+ const waiting = new Map(); let id = 0;
+ worker.onmessage = ({data}) => { const p=waiting.get(data.id); if(!p)return; waiting.delete(data.id); data.error?p.reject(Error(data.error)):p.resolve(data.result); };
+ worker.onerror = e => {for(const p of waiting.values())p.reject(Error(e.message));waiting.clear();};
+ function request(payload){return new Promise((resolve,reject)=>{const key=++id;waiting.set(key,{resolve,reject});worker.postMessage({id:key,payload});});}
+ function compare(a,b,path='response'){
+  if(typeof a==='number'&&typeof b==='number'){const delta=Math.abs(a-b);maxDifference=Math.max(maxDifference,delta);if(delta>1e-8*Math.max(1,Math.abs(b)))throw Error(path+': '+a+' != '+b);return;}
+  if(Array.isArray(b)){if(!Array.isArray(a)||a.length!==b.length)throw Error(path+' array size');b.forEach((v,i)=>compare(a[i],v,path+'['+i+']'));return;}
+  if(b&&typeof b==='object'){for(const key of Object.keys(b)){// Exception wording differs between NumPy versions; category/behaviour are checked.
+    if(key==='message'||key==='explanation')continue;compare(a?.[key],b[key],path+'.'+key);}return;}
+  if(a!==b)throw Error(path+': '+a+' != '+b);
+ }
+ try{
+  const cases=await(await fetch('browser-cases.json')).json();
+  for(const test of cases){report.textContent='Running '+test.name+' ('+completed+'/'+cases.length+')';try{compare(await request(test.payload),test.expected);}catch(error){failures.push({name:test.name,error:error.message});}completed++;}
+  report.textContent=JSON.stringify({passed:failures.length===0,cases:completed,maxDifference,seconds:(performance.now()-start)/1000,failures},null,2);
+ }catch(error){report.textContent=JSON.stringify({passed:false,cases:completed,error:error.message},null,2);}finally{worker.terminate();document.querySelector('#run').disabled=false;}
+};
+</script></html>

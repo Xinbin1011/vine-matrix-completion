@@ -4,14 +4,18 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "vine-matrix-completion"
-version = "0.1.0"
+version = "0.2.0"
 description = "Correlation matrix completion with partial correlation vines and a Codex workflow"
 readme = "README.md"
 license = "MIT"
 license-files = ["LICENSE"]
 requires-python = ">=3.10"
-authors = [{name = "Xinbin (Max) Xu"}]
+authors = [{name = "Tim Harrison"}, {name = "Paul Hewson"}, {name = "Xinbin Xu"}]
 dependencies = ["numpy>=1.24", "networkx>=3.2"]
+
+[project.urls]
+Repository = "https://github.com/Xinbin1011/vine-matrix-completion"
+Demonstration = "https://xinbin1011.github.io/vine-matrix-completion/"
 
 [project.optional-dependencies]
 dev = ["pytest>=8"]

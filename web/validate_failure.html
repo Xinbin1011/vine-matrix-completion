@@ -1,0 +1,10 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><title>Browser solver load failure check</title>
+<h1>Browser solver load failure check</h1><p id="connection-state">Ready</p><button id="run">Check missing solver archive</button><pre id="report">Ready</pre>
+<!-- Here the worker lives in web/, where no solver-python.zip is served. -->
+<script src="../docs/solver-client.js"></script><script>
+document.querySelector('#run').onclick=async()=>{
+ const target=document.querySelector('#report');target.textContent='Waiting for expected failure…';
+ try{await window.matrixSolver.request({matrix:[[1,.5,null],[.5,1,.5],[null,.5,1]],method:'max_entropy',strategy:'greedy',order:[1,2,3],partials:[],action:'plan'});target.textContent=JSON.stringify({passed:false,error:'Unexpected successful load'});}
+ catch(error){target.textContent=JSON.stringify({passed:error.message.includes('could not be downloaded'),error:error.message});}
+};
+</script></html>
