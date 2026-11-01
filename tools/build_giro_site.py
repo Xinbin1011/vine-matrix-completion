@@ -85,9 +85,28 @@ with zipfile.ZipFile(SITE / "resources/local-python-demo.zip", "w", zipfile.ZIP_
     for path in sources:
         archive.write(path, "vine-matrix-completion/src/vine_completion/" + path.name)
     archive.write(REPO / "LICENSE", "vine-matrix-completion/LICENSE")
+    # Keep the downloadable worked notebook runnable from a normal notebooks folder.
+    # These are the same repository inputs used by its setup and optional example.
+    notebook_resources = [
+        "pyproject.toml", "README.md", "examples/five_by_five.json",
+        "notebooks/GIRO_2026_matrix_completion.ipynb",
+        "notebooks/GIRO_2026_matrix_completion_v1.ipynb",
+        "docs/resources/GIRO_2026_D10_slides.pdf",
+    ]
+    for relative in notebook_resources:
+        archive.write(REPO / relative, "vine-matrix-completion/" + relative)
     if notebook.exists() and not (LOCAL / "dist/research/notebook.ipynb").exists():
         archive.write(notebook, "employer-demo/dist/research/notebook.ipynb")
-    archive.writestr("START_HERE.txt", "GIRO 2026 local Python explorer\nTeam members: Tim Harrison, Paul Hewson and Xinbin Xu.\n\nInstall Python 3.10+, NumPy and NetworkX. From this extracted folder run:\npython -m pip install numpy networkx\npython employer-demo/serve.py\nThen open http://127.0.0.1:8766/\nThe server binds only to this computer. No browser Python download is needed.\nThe public browser version is https://xinbin1011.github.io/vine-matrix-completion/\n")
+    start_here = "GIRO 2026 local Python explorer\nTeam members: Tim Harrison, Paul Hewson and Xinbin Xu.\n\nInstall Python 3.10+, NumPy and NetworkX. From this extracted folder run:\npython -m pip install numpy networkx\npython employer-demo/serve.py\nThen open http://127.0.0.1:8766/\nThe server binds only to this computer. No browser Python download is needed.\nThe public browser version is https://xinbin1011.github.io/vine-matrix-completion/\n"
+    # Appending matches the preserved base instructions and keeps both uses explicit.
+    notebook_instructions = (
+        "\nWorked notebook:\n"
+        "Open vine-matrix-completion/notebooks/GIRO_2026_matrix_completion.ipynb in Jupyter.\n"
+        'From vine-matrix-completion run: python -m pip install -e ".[plot]"\n'
+        "Its example data and D10 slides are included. The older notebook is saved alongside it.\n"
+        "For the full repository and developer resources use https://github.com/Xinbin1011/vine-matrix-completion\n"
+    )
+    archive.writestr("START_HERE.txt", start_here + notebook_instructions)
 
 manifest = {"runtime": "Pyodide 314.0.7", "backend_sha256": hashlib.sha256((LOCAL / "backend.py").read_bytes()).hexdigest(),
             "package_sources": {p.name: hashlib.sha256(p.read_bytes()).hexdigest() for p in sources},

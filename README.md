@@ -9,7 +9,7 @@ assumptions, numerical reconstruction and validity checks.
 | Resource | Use |
 | --- | --- |
 | [Interactive demo](https://xinbin1011.github.io/vine-matrix-completion/) | Change inputs and inspect the calculation in your browser. Works when the project PC is switched off. |
-| [Read the conference notebook](https://xinbin1011.github.io/vine-matrix-completion/notebook.html) · [notebook source](notebooks/GIRO_2026_matrix_completion.ipynb) | Reproduce the GIRO example using the Python package. |
+| [Read the conference notebook](https://xinbin1011.github.io/vine-matrix-completion/notebook.html) · [notebook source](notebooks/GIRO_2026_matrix_completion.ipynb) | Follow the workflow, function map and all four missing-correlation calculations using the Python package. |
 | [D10 slides](docs/resources/GIRO_2026_D10_slides.pdf) | The two-slide matrix-completion section selected for this package. |
 | [Local Python demo](https://xinbin1011.github.io/vine-matrix-completion/resources/local-python-demo.zip) | Download, extract and follow START_HERE.txt for the local-server alternative. |
 
@@ -36,6 +36,11 @@ result.diagnostics   # numerical checks
 
 See [the conference notebook](notebooks/GIRO_2026_matrix_completion.ipynb) for
 the supplied entries, explicit vine assumptions and a complete worked result.
+Its [workflow diagram](docs/resources/completion-workflow.png) and
+[entry-dependency diagram](docs/resources/missing-correlation-dependencies.png)
+show the two completion policies and the four reconstruction steps. The function
+map explains inputs, outputs and roles; the supporting reference covers validation,
+the chordal solver and result fields.
 The underlying method is from published theory; browser presentation and
 additional validation used Codex assistance.
 
@@ -47,6 +52,10 @@ and slide revisions were also preserved in a dated local archive before this
 update. [Resource provenance](docs/resources/versions.json) records the baseline
 hashes. D10 is included unchanged; the full team deck and Overleaf project are
 maintained separately.
+
+The previous conference notebook is preserved as
+[v1 web view](https://xinbin1011.github.io/vine-matrix-completion/notebook-v1.html)
+and [v1 notebook source](notebooks/GIRO_2026_matrix_completion_v1.ipynb).
 
 ## Build and run the browser site locally
 
