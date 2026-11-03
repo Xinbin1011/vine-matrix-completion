@@ -1,6 +1,6 @@
 {
   "runtime": "Pyodide 314.0.7",
-  "asset_version": "3961e04afe30becb",
+  "asset_version": "26765a58a314a467",
   "release_date": "2026-11-03",
   "previous_demo": "versions/2026-11-03-before-narrative-update/",
   "backend_sha256": "72acf7076844f4f95b73b67c5fab70de3f110793d3f59ffabad7d1394dc89c0c",
@@ -17,8 +17,8 @@
     "__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d"
   },
   "ui_sources": {
-    "index.html": "0dcb024f2c2d797b84e9f5fdeee91f51280d9b88ac15565e4990bfe253cb6f6c",
-    "explorer.js": "2c8e8769e7e0122c22cd37f0cbb379e7ab587d60a2abf2cfae9c703818461d71",
+    "index.html": "071c546766e98cb42cfe5c5620be118ec1a76c599a65c15f5cdf4ce3f18d2b43",
+    "explorer.js": "36fd36a22992f23553d555f7ee4fbe83f3d74b8707770c9ea9166622173f1564",
     "styles.css": "f572867ebd94fb5190a456a42954ea7ce38bb9174133b38e9b9241fa1be4ac4f",
     "explorer.css": "c9b539be175b8584ea913a1badd4f2b32b0d9b1a338f3ea979d628241299c6be",
     "inputs.js": "18fb9d8198e6b9d0428db6b56a9b254cfb7448f73ee361113887addbfcd4f9b1",
