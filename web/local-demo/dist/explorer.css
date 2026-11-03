@@ -142,7 +142,13 @@
 .custom-tree svg{height:220px}
 .draft-edge{stroke:#000;stroke-width:1.5;pointer-events:none}
 .draft-edge-hit{stroke:transparent;stroke-width:17;cursor:pointer}
-.draft-edge-label{font-size:11px;cursor:pointer}
+.tree-label.draft-edge-label{font-size:12px;cursor:pointer}
+.draft-edge.value-known{stroke:var(--value-known)}
+.draft-edge.value-unknown{stroke:var(--value-unknown)}
+.draft-edge.value-judgement{stroke:var(--value-judgement)}
+.draft-edge-label.value-known{fill:var(--value-known)}
+.draft-edge-label.value-unknown{fill:var(--value-unknown)}
+.draft-edge-label.value-judgement{fill:var(--value-judgement)}
 .draft-candidate{stroke:#9ba19a;stroke-width:1.2;stroke-dasharray:3 4;pointer-events:none}
 .draft-node{cursor:pointer}
 .draft-node circle{fill:#fff;stroke:#000;stroke-width:1}
@@ -150,8 +156,13 @@
 .draft-node.allowed circle{stroke:#737b70;stroke-width:2;stroke-dasharray:3 3}
 .custom-tree g[role=button]:focus{outline:none}
 .draft-node:focus-visible circle{stroke:#759b2f;stroke-width:3}
-.custom-tree g[data-vine-action=remove]:focus-visible .draft-edge{stroke:#759b2f;stroke-width:3}
+.custom-tree g[data-vine-action=remove]:focus-visible .draft-edge{stroke-width:3}
 .allowed-connections{font-size:12px;line-height:1.6}
 .allowed-connections p{margin:8px 0}
 .allowed-connections button{background:#fff;border:1px solid var(--line);padding:5px 8px;font-size:12px;margin:3px 7px 3px 0}
 .general-results .status.draft{background:#f5f6f2;border-color:#bac2b6;color:var(--ink)}
+.narrative-overview{padding-bottom:26px}
+.narrative-overview .research-grid article{padding-top:12px}
+.narrative-overview .research-grid h3{margin-bottom:7px}
+.narrative-overview .research-grid p{font-size:14px;line-height:1.7;margin-bottom:0}
+.lab-intro p{font-size:14px;line-height:1.7;font-weight:400}

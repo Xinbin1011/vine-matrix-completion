@@ -22,7 +22,7 @@ SLIDES = (
     ("GIRO_2026_Matrix_Completion_Graph_D17_2026-11-01.pdf", "D17 graph slides · 1 Nov 2026"),
     ("GIRO_2026_Matrix_Completion_Matrix_D17_2026-11-01.pdf", "D17 matrix slides · 1 Nov 2026"),
 )
-PREVIOUS_DEMO = "versions/2026-11-01-before-ui-update/"
+PREVIOUS_DEMO = "versions/2026-11-03-before-narrative-update/"
 
 for name in UI_ASSETS:
     shutil.copy2(LOCAL / "dist" / name, SITE / name)
@@ -64,7 +64,7 @@ for filename, label in SLIDES:
         raise RuntimeError(f"Missing reviewed slide resource: {filename}")
     resource_links += f'<a href="resources/{filename}">{label} ↗</a>'
 resource_links += '<a href="resources/GIRO_2026_D10_slides.pdf">D10 slides (earlier) ↗</a>'
-resource_links += f'<a href="{PREVIOUS_DEMO}">Previous demo · before 1 Nov update ↗</a>'
+resource_links += f'<a href="{PREVIOUS_DEMO}">Previous demo · before 3 Nov update ↗</a>'
 page = page.replace('<div class="resource-links">', '<div class="resource-links">' + resource_links)
 # The HTML, client, worker and Python archive must move to the same release.
 # Propagate a content version to the worker and archive to avoid a stale adapter.
@@ -93,7 +93,7 @@ summary = summary.replace('The local browser preview uses the Python package.',
 summary = summary.replace('the unchanged research [notebook]', 'the conference [notebook]')
 summary = summary.replace('Validation and this unpublished local presentation use Codex assistance.',
                           'Browser presentation and additional validation used Codex assistance.')
-summary += "\n\nLatest slides (1 November 2026): " + " · ".join(
+summary += "\n\nPublished slides (1 November 2026): " + " · ".join(
     f"[{label}]({filename})" for filename, label in SLIDES
 ) + ". The [earlier D10 slides](GIRO_2026_D10_slides.pdf) remain available.\n"
 (SITE / "resources/technical-summary.md").write_text(summary, encoding="utf-8")
@@ -107,6 +107,8 @@ with zipfile.ZipFile(SITE / "resources/local-python-demo.zip", "w", zipfile.ZIP_
     for path in LOCAL.rglob("*"):
         if path.is_file():
             relative = path.relative_to(LOCAL)
+            if "__pycache__" in relative.parts or path.suffix in {".pyc", ".pyo"}:
+                continue
             if notebook.exists() and relative.as_posix() == "dist/research/notebook.ipynb":
                 archive.write(notebook, "employer-demo/" + relative.as_posix())
             else:
@@ -121,6 +123,9 @@ with zipfile.ZipFile(SITE / "resources/local-python-demo.zip", "w", zipfile.ZIP_
         "notebooks/GIRO_2026_matrix_completion.ipynb",
         "notebooks/GIRO_2026_matrix_completion_v1.ipynb",
         "docs/resources/GIRO_2026_D10_slides.pdf",
+        "docs/resources/technical-summary.md",
+        "docs/resources/completion-workflow.png",
+        "docs/resources/missing-correlation-dependencies.png",
     ]
     notebook_resources += ["docs/resources/" + filename for filename, _ in SLIDES]
     for relative in notebook_resources:
@@ -139,7 +144,7 @@ with zipfile.ZipFile(SITE / "resources/local-python-demo.zip", "w", zipfile.ZIP_
     archive.writestr("START_HERE.txt", start_here + notebook_instructions)
 
 manifest = {"runtime": "Pyodide 314.0.7", "asset_version": asset_version,
-            "release_date": "2026-11-01", "previous_demo": PREVIOUS_DEMO,
+            "release_date": "2026-11-03", "previous_demo": PREVIOUS_DEMO,
             "backend_sha256": hashlib.sha256((LOCAL / "backend.py").read_bytes()).hexdigest(),
             "package_sources": {p.name: hashlib.sha256(p.read_bytes()).hexdigest() for p in sources},
             "ui_sources": {name: hashlib.sha256((LOCAL / "dist" / name).read_bytes()).hexdigest()

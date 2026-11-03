@@ -3,8 +3,11 @@
 **Team members: Tim Harrison, Paul Hewson and Xinbin Xu.**
 
 Complete an incomplete correlation or covariance matrix while preserving the
-supplied entries. Inspect the observed graph, vine, partial-correlation
-assumptions, numerical reconstruction and validity checks.
+supplied entries. The GIRO worked example follows one clear story:
+
+- Problem: fill four missing ordinary Pearson correlations while keeping six supplied pairs fixed. A positive semidefinite (PSD) matrix alone does not justify the added modelling assumptions.
+- How: choose maximum entropy as the completion principle and use a Gaussian model as the worked example. At fixed variances, maximising Gaussian entropy reduces to maximising det(R); a partial-correlation vine factorises that determinant.
+- Result: in the compatible GIRO vine, six factors are fixed by supplied information and four free factors are maximised by zero partial correlations. Reconstruction fills all four gaps, preserves known inputs and gives a positive definite matrix. The vine exposes the connections, conditioning relationships and partial-correlation assumptions behind the model.
 
 Want to help improve it? [Add the project to Codex and contribute](#add-this-project-to-codex-and-contribute).
 
@@ -12,7 +15,7 @@ Want to help improve it? [Add the project to Codex and contribute](#add-this-pro
 | --- | --- |
 | [Interactive demo](https://xinbin1011.github.io/vine-matrix-completion/) | Change inputs and inspect the calculation in your browser. Works when the project PC is switched off. |
 | [Read the conference notebook](https://xinbin1011.github.io/vine-matrix-completion/notebook.html) · [notebook source](notebooks/GIRO_2026_matrix_completion.ipynb) | Follow the workflow, function map and all four missing-correlation calculations using the Python package. |
-| [D17 graph slides · 1 November 2026](docs/resources/GIRO_2026_Matrix_Completion_Graph_D17_2026-11-01.pdf) · [D17 matrix slides · 1 November 2026](docs/resources/GIRO_2026_Matrix_Completion_Matrix_D17_2026-11-01.pdf) | Latest two-slide alternatives: graph or matrix presentation. |
+| [Published D17 graph slides · 1 November 2026](docs/resources/GIRO_2026_Matrix_Completion_Graph_D17_2026-11-01.pdf) · [Published D17 matrix slides · 1 November 2026](docs/resources/GIRO_2026_Matrix_Completion_Matrix_D17_2026-11-01.pdf) | Published two-slide alternatives: graph or matrix presentation. |
 | [D10 slides (earlier version)](docs/resources/GIRO_2026_D10_slides.pdf) | Preserved at the original address so existing links still work. |
 | [Local Python demo](https://xinbin1011.github.io/vine-matrix-completion/resources/local-python-demo.zip) | Download, extract and follow START_HERE.txt for the local-server alternative. |
 
@@ -24,6 +27,37 @@ version. Input matrices stay in the browser. No model API or API key is used.
 The default demo uses rounded GIRO inputs; the original full-precision notebook
 example is labelled separately. The notebook, source package and slides
 describe matrix completion, not an empirically calibrated insurance model.
+
+## Modelling choices exposed by the vine
+
+Judgement 1 selects a vine structure. The example's greedy heuristic favours
+eligible edges whose partial correlations can be calculated from supplied entries,
+then absolute strength. This is a chosen heuristic, distinct from the spanning-tree
+and proximity rules that establish a valid vine.
+
+Judgement 2 selects partial-correlation assumptions or a completion objective.
+In this compatible example, the maximum-determinant solution has four zero free
+partial correlations in the selected vine. This does not justify setting arbitrary
+missing ordinary correlations or arbitrary vine partials to zero. A Gaussian
+interpretation is an additional model assumption; the matrix alone does not select
+a copula family.
+
+For a complete partial-correlation vine, det(R) = ∏ₑ(1 − ρₑ²). In the compatible
+GIRO representation, the known factors stay fixed, so the optimisation reduces to
+four zero partial assignments. This simplification does not apply to arbitrary
+zero-filling on other vines.
+
+The vine exposes modelling choices: which variables connect, what is conditioned
+on, and which partial correlations are supplied or assumed. The completion
+principle and distributional assumptions are further model choices; expert
+judgement is one input. A valid matrix need not be closest to the unknown truth.
+See [Kurowicka and Cooke (2006), §4.2](https://doi.org/10.1016/j.laa.2006.01.031)
+and the [determinant/entropy explanation](https://xinbin1011.github.io/vine-matrix-completion/#note-maxdet).
+
+With more business information, underwriters can help articulate residual
+dependence. That knowledge can inform revised partial-correlation assumptions,
+which should be recorded and checked again. Algebraic validity and evidence for
+the assumptions remain separate questions.
 
 ## Use the package in a notebook
 
@@ -48,6 +82,9 @@ The underlying method is from published theory; browser presentation and
 additional validation used Codex assistance.
 
 ## Versions and preservation
+
+The [previous published demo before the 3 November narrative update](https://xinbin1011.github.io/vine-matrix-completion/versions/2026-11-03-before-narrative-update/)
+retains its solver, notebook and dated D17 slide resources.
 
 The [previous online demo](https://xinbin1011.github.io/vine-matrix-completion/versions/2026-11-01-before-ui-update/)
 preserves the complete public site before the 1 November interface update,

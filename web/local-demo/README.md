@@ -51,8 +51,15 @@ one-click Windows launcher expects the existing project virtual environment.
    edits; incomplete drafts block **Next**. Use **Undo** or **Reset connections**
    as needed. Changed structure clears affected higher trees and resets affected
    partial judgements while retaining unchanged earlier judgements. Matrix entries
-   stay fixed. Structural diagram labels are conditioned/conditioning sets; assign
-   values in Step 3.
+   stay fixed. Manual connections and labels use the same value-status colours:
+   black for known supplied correlations, orange for unknowns, and blue for
+   explicitly chosen/submitted partial judgements or estimates from an accepted
+   completion. The square legend sits below the trees. Colour status clears for
+   affected edits and retains unaffected earlier judgements.
+   Manual edge labels show ordinary or partial correlations in the same rho-
+   subscript notation and two-decimal display as the automatic view; unknowns
+   show `?` or “later”. Node labels remain conditioned/conditioning sets, and
+   free values are chosen in Step 3.
 3. In **Assign partials**, select **Set partial correlations** and review or edit
    every free value, or select **Maximum determinant** for a supported chordal
    graph. Visible zeros are assumptions. Choose **Start reconstruction**.
@@ -76,9 +83,9 @@ one-click Windows launcher expects the existing project virtual environment.
 The shared key explains notation, proximity, `?` and “later”. Notes and references
 are detached from the worksheet in the final page section, with numbered links
 and working backlinks. They explain maximum determinant and where it applies.
-Graph edge coefficients display approximate two-decimal values; calculation
-inputs retain their full precision. Graph set notation uses semicolons for
-conditioning; equation notation uses a dot for partial correlation.
+Graph edge coefficients in automatic and manual views use project dot-subscript
+notation and display approximate two-decimal values; calculations retain full
+precision. Node set labels retain the paper’s semicolon conditioning notation.
 
 The demo-wide data colours have the same meaning in matrices, graphs, partial
 inputs, traces, results and static worked examples: black for known values,
@@ -93,6 +100,20 @@ In the simple maximum-determinant view, shared-variable/separator equations
 solve one missing pair at a time, and each result is checked against the
 existing solver. The explicit-vine view uses the existing reverse-partial
 equations. No backend or package change was needed.
+
+The opening covers direct ordinary-correlation assignment and filling then
+repairing a matrix; constrained repair can also preserve supplied inputs. How
+starts from maximum entropy as the chosen completion principle, uses Gaussianity
+as the worked example, and at fixed variances reduces entropy maximisation to
+maximising det(R). Result explains the vine factorisation into (1 − ρ_e^2): in
+the compatible GIRO example, six known factors stay fixed and four free factors
+are maximised by zero partial correlations. This simplification is specific to
+the compatible representation, not a universal zero-fill rule. The conclusion
+now centres on modelling choices exposed by the vine: connections, conditioning
+relationships and partial-correlation assumptions, alongside the completion
+principle. Expert judgement is one input to modelling. Numbered end notes carry
+the fuller explanation. No claim of greater accuracy, speed or a different
+optimum than an equally constrained direct matrix method is made.
 
 ## Mathematical scope
 
