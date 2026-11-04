@@ -6,7 +6,7 @@
   <meta name="description" content="A Vine Copulas Working Party demonstration. Team members: Tim Harrison, Paul Hewson and Xinbin Xu. Complete missing correlations, inspect vine assumptions and check the result.">
   <title>Correlation matrix completion · Vine Copulas Working Party</title>
   <link rel="stylesheet" href="styles.css?v=26765a58a314a467">
-  <link rel="stylesheet" href="explorer.css?v=efcea5d5b0ded8d6">
+  <link rel="stylesheet" href="explorer.css?v=edea5d6ad5c21243">
   <script defer src="inputs.js?v=26765a58a314a467"></script>
   <script defer src="solver-client.js?v=26765a58a314a467"></script>
   <script defer src="simple-equations.js?v=26765a58a314a467"></script>
@@ -33,14 +33,32 @@
     </section>
 
     <section class="wrap narrative-overview" aria-label="Problem, how and result">
-      <details>
-        <summary>Problem, how and result <span aria-hidden="true">+</span></summary>
       <div class="research-grid">
-        <article><h3>Problem</h3><p>Traditional matrix routes choose missing ordinary correlations directly, or fill the gaps and repair the matrix. Plausible pairwise values need not form a valid matrix; repair adds choices about the objective and which entries may change. Both validity and modelling judgement need justification. <a id="overview-problem-ref" class="note-ref" href="#note-feasibility" data-note="note-feasibility">[1]</a></p></article>
-        <article><h3>How</h3><p>Choose maximum entropy as the completion principle. We illustrate it with a Gaussian model: at fixed variances, maximising its entropy is equivalent to maximising det(R). Then express that determinant in partial-correlation vine coordinates. <a id="overview-structure-ref" class="note-ref" href="#note-vine" data-note="note-vine">[2]</a> <a id="worked-example-ref" class="note-ref" href="#note-maxdet" data-note="note-maxdet">[5]</a></p></article>
-        <article><h3>Result</h3><p>The vine factorises det(R) into simple terms (1 − ρ<sub>e</sub><sup>2</sup>). In the compatible GIRO example, the known factors are fixed, so each free factor is maximised by a zero partial correlation. Four zero assignments complete the optimisation; reconstruction preserves known inputs and gives a positive definite matrix. <a id="overview-result-ref" class="note-ref" href="#note-maxdet" data-note="note-maxdet">[5]</a></p></article>
+        <article>
+          <h3>Problem</h3>
+          <p class="overview-preview">Fill missing correlations while preserving the supplied values.</p>
+          <details class="overview-details">
+            <summary><span class="overview-more">Read more</span><span class="overview-less">Show less</span></summary>
+            <p>Traditional matrix routes choose missing ordinary correlations directly, or fill the gaps and repair the matrix. Plausible pairwise values need not form a valid matrix; repair adds choices about the objective and which entries may change. Both validity and modelling judgement need justification. <a id="overview-problem-ref" class="note-ref" href="#note-feasibility" data-note="note-feasibility">[1]</a></p>
+          </details>
+        </article>
+        <article>
+          <h3>How</h3>
+          <p class="overview-preview">Use Gaussian maximum entropy, expressed through a partial-correlation vine.</p>
+          <details class="overview-details">
+            <summary><span class="overview-more">Read more</span><span class="overview-less">Show less</span></summary>
+            <p>Choose maximum entropy as the completion principle. We illustrate it with a Gaussian model: at fixed variances, maximising its entropy is equivalent to maximising det(R). Then express that determinant in partial-correlation vine coordinates. <a id="overview-structure-ref" class="note-ref" href="#note-vine" data-note="note-vine">[2]</a> <a id="worked-example-ref" class="note-ref" href="#note-maxdet" data-note="note-maxdet">[5]</a></p>
+          </details>
+        </article>
+        <article>
+          <h3>Result</h3>
+          <p class="overview-preview">Four zero partial correlations give a valid completion of the GIRO matrix.</p>
+          <details class="overview-details">
+            <summary><span class="overview-more">Read more</span><span class="overview-less">Show less</span></summary>
+            <p>The vine factorises det(R) into simple terms (1 − ρ<sub>e</sub><sup>2</sup>). In the compatible GIRO example, the known factors are fixed, so each free factor is maximised by a zero partial correlation. Four zero assignments complete the optimisation; reconstruction preserves known inputs and gives a positive definite matrix. <a id="overview-result-ref" class="note-ref" href="#note-maxdet" data-note="note-maxdet">[5]</a></p>
+          </details>
+        </article>
       </div>
-      </details>
     </section>
 
     <section id="explore" class="exploration">
