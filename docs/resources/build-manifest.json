@@ -1,8 +1,8 @@
 {
   "runtime": "Pyodide 314.0.7",
   "asset_version": "26765a58a314a467",
-  "release_date": "2026-11-03",
-  "previous_demo": "versions/2026-11-03-before-narrative-update/",
+  "release_date": "2026-11-04",
+  "previous_demo": "versions/2026-11-04-before-greedy-rule-clarification/",
   "backend_sha256": "72acf7076844f4f95b73b67c5fab70de3f110793d3f59ffabad7d1394dc89c0c",
   "package_sources": {
     "cli.py": "d5329b3bf878771bd71cc61861858c74d6aff80caf1e2f6a5a639b74ee887b2a",
@@ -17,7 +17,7 @@
     "__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d"
   },
   "ui_sources": {
-    "index.html": "071c546766e98cb42cfe5c5620be118ec1a76c599a65c15f5cdf4ce3f18d2b43",
+    "index.html": "0342e9f07babc1885eb6835ec36292c86cc00365f22f1d20b794ed29500951dc",
     "explorer.js": "36fd36a22992f23553d555f7ee4fbe83f3d74b8707770c9ea9166622173f1564",
     "styles.css": "f572867ebd94fb5190a456a42954ea7ce38bb9174133b38e9b9241fa1be4ac4f",
     "explorer.css": "c9b539be175b8584ea913a1badd4f2b32b0d9b1a338f3ea979d628241299c6be",

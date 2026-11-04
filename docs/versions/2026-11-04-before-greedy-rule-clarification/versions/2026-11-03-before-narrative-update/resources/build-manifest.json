@@ -1,0 +1,28 @@
+{
+  "runtime": "Pyodide 314.0.7",
+  "asset_version": "8e1f8d6fb41474cf",
+  "release_date": "2026-11-01",
+  "previous_demo": "versions/2026-11-01-before-ui-update/",
+  "backend_sha256": "72acf7076844f4f95b73b67c5fab70de3f110793d3f59ffabad7d1394dc89c0c",
+  "package_sources": {
+    "cli.py": "d5329b3bf878771bd71cc61861858c74d6aff80caf1e2f6a5a639b74ee887b2a",
+    "completion.py": "7a1f13c3c2880ca3127e0cb48df8383a4c79a4a495c7da544534b27b77005bee",
+    "graphs.py": "60ffe3ad1fe9bc534e4d05713ce841eb2dba63cef2667e34f969f967fff2fef0",
+    "io.py": "eb3fa4a2972bdb775c232c3b3a03121ecc36338219def129af25aff4b222b845",
+    "matrix.py": "4262d7377a341dfda484e5f13bffd6544c45b6c939ae97b6ba4acbd98a7193e8",
+    "partials.py": "9e911fa2929d5b16d6f7e83cf19b622be2742e5df232abc8750957968c7197f2",
+    "plotting.py": "a0e2943dfbabf6e29332e8b2c14720d7f202227a96e8ee8502f72cfc49f4a783",
+    "vines.py": "727262c13dc57d08553e3f0296de53d9520b3dc7c6a4530a2545b52c718cb5f4",
+    "__init__.py": "c6512bf4943d268832317417be54470a55aa78b7f3a40ff0b53aef4a88e8776f",
+    "__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d"
+  },
+  "ui_sources": {
+    "index.html": "77475bc27e9546aa7771ea5542f8263d584cddf654dc1ff824abe3ee421903cd",
+    "explorer.js": "115c4aac2ed6629fbb02c8809204851be2267c21005e8e9a59235a8a66233fa7",
+    "styles.css": "f572867ebd94fb5190a456a42954ea7ce38bb9174133b38e9b9241fa1be4ac4f",
+    "explorer.css": "d0f2c3b4be659a5a99767ed0c4e671568a198b66918d2667cbfc7808eb82f3ad",
+    "inputs.js": "18fb9d8198e6b9d0428db6b56a9b254cfb7448f73ee361113887addbfcd4f9b1",
+    "simple-equations.js": "6c6b00425b9f86ef0716084d3c8f90820028af13a9f0f2c15b72696303e46b82",
+    "vine-editor.js": "b26bae38a2776841fc17e55d30fcebd786e087dafaea831b8a6f8471ebb62281"
+  }
+}

@@ -10,11 +10,15 @@
   "original_notebook_sha256": "8E6BE3B0A12D045EBB7618B3CF503911118C5FD04D9C5F5BC632411CB75B26DD",
   "demonstration_notebook_sha256": "E4344F848CA52FEF27F3E51734E87A1351FE7149A3E11DF00A80394673ED9914",
   "demo_revision": {
-    "date": "2026-11-03",
-    "previous_commit": "5ebc0e50f5c150f4ac71232b332c4d942a560a75",
-    "previous_demo_path": "versions/2026-11-03-before-narrative-update/",
+    "date": "2026-11-04",
+    "previous_commit": "caf047c764436c015fb4e063a60ece57ecd6f9a9",
+    "previous_demo_path": "versions/2026-11-04-before-greedy-rule-clarification/",
     "earlier_demo_path": "versions/2026-11-01-before-ui-update/",
-    "description": "Reviewed entropy-to-determinant-to-partial-factor explanation and modelling choices, with detailed linked notes."
+    "description": "Known information first, then absolute correlation strength: consistent greedy-rule clarification, with current-layer and validity distinctions.",
+    "earlier_demo_paths": [
+      "versions/2026-11-03-before-narrative-update/",
+      "versions/2026-11-01-before-ui-update/"
+    ]
   },
   "current_slides": [
     {
@@ -36,7 +40,7 @@
     "revision": "teaching-v2",
     "date": "2026-11-01",
     "previous_commit": "e84a1a535379acd1b01efa9d054f866eeb1857aa",
-    "current_notebook_sha256": "9b5f810704bc26b8b4bd9b90ace800481a89eb6d7f463ccea83ed4805f13a0b6",
+    "current_notebook_sha256": "8ea8719f3bba6ef2fa0eb26810b0f3b7f0023edd5dd0614835109d97b1aa5de9",
     "previous_notebook_sha256": "ace562c6abc75e53f2f84bab0eb6e39f8d4015f183824225282319c967a3327e",
     "previous_html_url": "https://xinbin1011.github.io/vine-matrix-completion/notebook-v1.html",
     "previous_source_path": "notebooks/GIRO_2026_matrix_completion_v1.ipynb",
@@ -50,5 +54,16 @@
     "date": "2026-11-03",
     "focus": "Maximum entropy, Gaussian example, determinant factorisation and exposed modelling choices",
     "previous_published_commit": "5ebc0e50f5c150f4ac71232b332c4d942a560a75"
+  },
+  "greedy_rule_revision": {
+    "date": "2026-11-04",
+    "previous_published_commit": "caf047c764436c015fb4e063a60ece57ecd6f9a9",
+    "previous_demo_path": "versions/2026-11-04-before-greedy-rule-clarification/",
+    "previous_notebook_source_path": "versions/2026-11-04-before-greedy-rule-clarification/resources/GIRO_2026_matrix_completion.ipynb",
+    "previous_notebook_sha256": "9b5f810704bc26b8b4bd9b90ace800481a89eb6d7f463ccea83ed4805f13a0b6",
+    "changed_notebook_markdown_cells": [
+      9
+    ],
+    "code_and_saved_outputs_unchanged": true
   }
 }

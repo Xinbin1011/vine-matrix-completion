@@ -8072,11 +8072,16 @@ The original full-precision covariance example is separate, at the end.</p>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="4.-Judgement-1:-choose-and-inspect-the-vine">4. Judgement 1: choose and inspect the vine<a class="anchor-link" href="#4.-Judgement-1:-choose-and-inspect-the-vine">¶</a></h2><p>The package's deterministic greedy heuristic prioritises eligible edges whose
-partial correlations can be calculated from supplied information, then absolute
-strength. This is our chosen structure heuristic, not a mathematical validity rule.
-Valid vines must satisfy the spanning-tree and regular-vine proximity conditions;
-the package checks them independently of how the structure was selected.</p>
+<h2 id="4.-Judgement-1:-choose-and-inspect-the-vine">4. Judgement 1: choose and inspect the vine<a class="anchor-link" href="#4.-Judgement-1:-choose-and-inspect-the-vine">¶</a></h2><p>The greedy rule is <strong>known information first; then strongest $|\rho|$</strong>.</p>
+<p>At each tree, eligible edges computable from fully supplied input blocks rank
+first, then absolute correlation strength. T1 uses ordinary correlations; higher
+trees use partial correlations. Stable labels break ties and edges are added
+without cycles. A supplied zero is known information, not a missing value.</p>
+<p>This is a local choice given earlier trees, not a search over complete vines.
+Keeping computable information early is a chosen heuristic. Spanning-tree and
+regular-vine proximity rules govern validity and are checked independently.
+Preserving supplied ordinary correlations is a separate completion requirement.
+A greedy selection alone does not establish the theorem's m-saturation conditions.</p>
 <p>A dot denotes partial correlation, for example $\rho_{25\cdot1}$.
 The four orange edges below require additional choices, not supplied observations.</p>
 </div>

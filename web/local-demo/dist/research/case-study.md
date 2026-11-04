@@ -8,7 +8,7 @@ Complete missing ordinary Pearson correlations while preserving supplied informa
 
 ## How
 
-Judgement 1 chooses a valid partial-correlation vine. Strongest eligible absolute correlation first is the chosen greedy heuristic; spanning-tree and proximity rules govern mathematical validity. The implementation favours partials calculable from supplied entries before absolute strength.
+Judgement 1 chooses a valid partial-correlation vine. The chosen greedy heuristic prioritises edges computable from fully supplied input blocks, then absolute correlation strength at each tree, with deterministic ties and cycle avoidance. This is a local choice given earlier trees; spanning-tree and proximity rules govern mathematical validity. Preserving the supplied ordinary correlations is a separate completion requirement.
 
 Choose maximum entropy as the completion principle. Gaussianity is the worked example: at fixed variances, maximising Gaussian entropy is equivalent to maximising det(R). A complete partial-correlation vine factorises the determinant as ∏ₑ(1 − ρₑ²). In the compatible GIRO vine, six factors are fixed by supplied information and four remain free; each free factor is maximised at zero. The optimisation therefore reduces to four zero partial assignments followed by reconstruction. This relies on the compatible representation; arbitrary zero-filling is not a general validity or optimality rule.
 

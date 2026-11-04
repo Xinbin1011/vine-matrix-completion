@@ -1,0 +1,54 @@
+{
+  "team": [
+    "Tim Harrison",
+    "Paul Hewson",
+    "Xinbin Xu"
+  ],
+  "original_repository_commit": "831dbe006b2f5b9cce7fff55bbe2baee7a4a1175",
+  "original_repository_commit_url": "https://github.com/Xinbin1011/vine-matrix-completion/commit/831dbe006b2f5b9cce7fff55bbe2baee7a4a1175",
+  "d10_slides_sha256": "F83E3A1F226ABF71D7B1DCE7FEF5667ABFA8F6B2D5C966A84AC023CDE534DE90",
+  "original_notebook_sha256": "8E6BE3B0A12D045EBB7618B3CF503911118C5FD04D9C5F5BC632411CB75B26DD",
+  "demonstration_notebook_sha256": "E4344F848CA52FEF27F3E51734E87A1351FE7149A3E11DF00A80394673ED9914",
+  "demo_revision": {
+    "date": "2026-11-03",
+    "previous_commit": "5ebc0e50f5c150f4ac71232b332c4d942a560a75",
+    "previous_demo_path": "versions/2026-11-03-before-narrative-update/",
+    "earlier_demo_path": "versions/2026-11-01-before-ui-update/",
+    "description": "Reviewed entropy-to-determinant-to-partial-factor explanation and modelling choices, with detailed linked notes."
+  },
+  "current_slides": [
+    {
+      "revision": "D17",
+      "date": "2026-11-01",
+      "variant": "graph",
+      "path": "GIRO_2026_Matrix_Completion_Graph_D17_2026-11-01.pdf",
+      "sha256": "791b9679d5850997a42b948212318f4c36ca576fd11ada7cca9deaaa67b003be"
+    },
+    {
+      "revision": "D17",
+      "date": "2026-11-01",
+      "variant": "matrix",
+      "path": "GIRO_2026_Matrix_Completion_Matrix_D17_2026-11-01.pdf",
+      "sha256": "dc0d891d00d568abf08644d946a854af39de37617713019d5b14fd8311046c22"
+    }
+  ],
+  "conference_notebook_revision": {
+    "revision": "teaching-v2",
+    "date": "2026-11-01",
+    "previous_commit": "e84a1a535379acd1b01efa9d054f866eeb1857aa",
+    "current_notebook_sha256": "9b5f810704bc26b8b4bd9b90ace800481a89eb6d7f463ccea83ed4805f13a0b6",
+    "previous_notebook_sha256": "ace562c6abc75e53f2f84bab0eb6e39f8d4015f183824225282319c967a3327e",
+    "previous_html_url": "https://xinbin1011.github.io/vine-matrix-completion/notebook-v1.html",
+    "previous_source_path": "notebooks/GIRO_2026_matrix_completion_v1.ipynb",
+    "workflow_display": {
+      "width": 840,
+      "height": 526,
+      "full_size_image_unchanged": true
+    }
+  },
+  "narrative_revision": {
+    "date": "2026-11-03",
+    "focus": "Maximum entropy, Gaussian example, determinant factorisation and exposed modelling choices",
+    "previous_published_commit": "5ebc0e50f5c150f4ac71232b332c4d942a560a75"
+  }
+}

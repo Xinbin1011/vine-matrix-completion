@@ -18,6 +18,7 @@ Want to help improve it? [Add the project to Codex and contribute](#add-this-pro
 | [Published D17 graph slides · 1 November 2026](docs/resources/GIRO_2026_Matrix_Completion_Graph_D17_2026-11-01.pdf) · [Published D17 matrix slides · 1 November 2026](docs/resources/GIRO_2026_Matrix_Completion_Matrix_D17_2026-11-01.pdf) | Published two-slide alternatives: graph or matrix presentation. |
 | [D10 slides (earlier version)](docs/resources/GIRO_2026_D10_slides.pdf) | Preserved at the original address so existing links still work. |
 | [Local Python demo](https://xinbin1011.github.io/vine-matrix-completion/resources/local-python-demo.zip) | Download, extract and follow START_HERE.txt for the local-server alternative. |
+| [Previous release · 3 November 2026](https://xinbin1011.github.io/vine-matrix-completion/versions/2026-11-04-before-greedy-rule-clarification/) · [previous notebook](https://xinbin1011.github.io/vine-matrix-completion/versions/2026-11-04-before-greedy-rule-clarification/notebook.html) | Preserved before the greedy-rule clarification. |
 
 The website loads Python, NumPy and NetworkX into a browser worker through
 Pyodide. Its first load needs an internet connection and downloads the runtime;
@@ -30,10 +31,12 @@ describe matrix completion, not an empirically calibrated insurance model.
 
 ## Modelling choices exposed by the vine
 
-Judgement 1 selects a vine structure. The example's greedy heuristic favours
-eligible edges whose partial correlations can be calculated from supplied entries,
-then absolute strength. This is a chosen heuristic, distinct from the spanning-tree
-and proximity rules that establish a valid vine.
+Judgement 1 selects a vine structure. The greedy rule is **known information first;
+then strongest |ρ|**. At each tree, eligible edges computable from fully supplied
+input blocks rank first, then absolute correlation strength, with deterministic
+ties and cycle avoidance. This is a local choice given earlier trees, not a search
+over complete vines. Spanning-tree and proximity rules govern validity; preserving
+supplied ordinary correlations is a separate completion requirement.
 
 Judgement 2 selects partial-correlation assumptions or a completion objective.
 In this compatible example, the maximum-determinant solution has four zero free

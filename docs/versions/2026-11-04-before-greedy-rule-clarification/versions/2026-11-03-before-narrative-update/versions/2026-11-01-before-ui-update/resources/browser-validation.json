@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "cases": 26,
+  "maxDifference": 3.552713678800501e-15,
+  "seconds": 3.8720999999940395,
+  "failures": [],
+  "runtime": "Pyodide 314.0.7",
+  "comparison": "Same package and adapter: browser worker versus CPython"
+}
