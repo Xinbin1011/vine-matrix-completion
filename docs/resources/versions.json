@@ -22,18 +22,25 @@
   },
   "current_slides": [
     {
-      "revision": "D17",
-      "date": "2026-11-01",
-      "variant": "graph",
-      "path": "GIRO_2026_Matrix_Completion_Graph_D17_2026-11-01.pdf",
-      "sha256": "791b9679d5850997a42b948212318f4c36ca576fd11ada7cca9deaaa67b003be"
+      "revision": "D35",
+      "date": "2026-11-04",
+      "variant": "primary",
+      "path": "GIRO_2026_Matrix_Completion_D35_2026-11-04.pdf",
+      "sha256": "0cc595f3cae013016f33778480aa1cd266a389ccaceddcaacdd365a83de6963c"
     },
     {
-      "revision": "D17",
-      "date": "2026-11-01",
-      "variant": "matrix",
-      "path": "GIRO_2026_Matrix_Completion_Matrix_D17_2026-11-01.pdf",
-      "sha256": "dc0d891d00d568abf08644d946a854af39de37617713019d5b14fd8311046c22"
+      "revision": "D35",
+      "date": "2026-11-04",
+      "variant": "with_construction",
+      "path": "GIRO_2026_Matrix_Completion_D35_with_construction_2026-11-04.pdf",
+      "sha256": "1863ecd430ee732db34b68bc2ca27635ddb95975633a9c3e9fb5e123c0c82ca3"
+    },
+    {
+      "revision": "D35",
+      "date": "2026-11-04",
+      "variant": "reveal",
+      "path": "GIRO_2026_Matrix_Completion_D35_reveal_2026-11-04.pdf",
+      "sha256": "fafcb4858402600c4a0581c94aa4c3526d99f04161d338bd406b2b5ff0480da3"
     }
   ],
   "conference_notebook_revision": {
@@ -65,5 +72,21 @@
       9
     ],
     "code_and_saved_outputs_unchanged": true
-  }
+  },
+  "prior_slides": [
+    {
+      "revision": "D17",
+      "date": "2026-11-01",
+      "variant": "graph",
+      "path": "GIRO_2026_Matrix_Completion_Graph_D17_2026-11-01.pdf",
+      "sha256": "791b9679d5850997a42b948212318f4c36ca576fd11ada7cca9deaaa67b003be"
+    },
+    {
+      "revision": "D17",
+      "date": "2026-11-01",
+      "variant": "matrix",
+      "path": "GIRO_2026_Matrix_Completion_Matrix_D17_2026-11-01.pdf",
+      "sha256": "dc0d891d00d568abf08644d946a854af39de37617713019d5b14fd8311046c22"
+    }
+  ]
 }

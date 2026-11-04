@@ -54,4 +54,6 @@ A completed correlation matrix does not identify margins or a copula family. Bus
 With more business information, underwriters can help articulate residual dependence and inform explicit partial-correlation assumptions. The assumptions still need evidence and the revised matrix must be checked. Numerical validity is not evidence that the assumptions fit an insurance portfolio.
 
 
-Published slides (1 November 2026): [D17 graph slides · 1 Nov 2026](GIRO_2026_Matrix_Completion_Graph_D17_2026-11-01.pdf) · [D17 matrix slides · 1 Nov 2026](GIRO_2026_Matrix_Completion_Matrix_D17_2026-11-01.pdf). The [earlier D10 slides](GIRO_2026_D10_slides.pdf) remain available.
+Earlier slides (1 November 2026): [D17 graph slides · 1 Nov 2026](GIRO_2026_Matrix_Completion_Graph_D17_2026-11-01.pdf) · [D17 matrix slides · 1 Nov 2026](GIRO_2026_Matrix_Completion_Matrix_D17_2026-11-01.pdf). The [earlier D10 slides](GIRO_2026_D10_slides.pdf) remain available.
+
+Current slides (4 November 2026): [D35 slides · 4 Nov 2026](GIRO_2026_Matrix_Completion_D35_2026-11-04.pdf) · [D35 with construction · 4 Nov 2026](GIRO_2026_Matrix_Completion_D35_with_construction_2026-11-04.pdf) · [D35 reveal · 4 Nov 2026](GIRO_2026_Matrix_Completion_D35_reveal_2026-11-04.pdf).

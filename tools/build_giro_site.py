@@ -19,8 +19,13 @@ SITE.mkdir(exist_ok=True)
 
 UI_ASSETS = ("styles.css", "explorer.css", "inputs.js", "simple-equations.js", "vine-editor.js")
 SLIDES = (
-    ("GIRO_2026_Matrix_Completion_Graph_D17_2026-11-01.pdf", "D17 graph slides · 1 Nov 2026"),
-    ("GIRO_2026_Matrix_Completion_Matrix_D17_2026-11-01.pdf", "D17 matrix slides · 1 Nov 2026"),
+    ("GIRO_2026_Matrix_Completion_D35_2026-11-04.pdf", "D35 slides · 4 Nov 2026"),
+    ("GIRO_2026_Matrix_Completion_D35_with_construction_2026-11-04.pdf", "D35 with construction · 4 Nov 2026"),
+    ("GIRO_2026_Matrix_Completion_D35_reveal_2026-11-04.pdf", "D35 reveal · 4 Nov 2026"),
+)
+EARLIER_SLIDES = (
+    ("GIRO_2026_Matrix_Completion_Graph_D17_2026-11-01.pdf", "D17 graph slides (earlier) · 1 Nov 2026"),
+    ("GIRO_2026_Matrix_Completion_Matrix_D17_2026-11-01.pdf", "D17 matrix slides (earlier) · 1 Nov 2026"),
 )
 PREVIOUS_DEMO = "versions/2026-11-04-before-greedy-rule-clarification/"
 
@@ -59,7 +64,7 @@ if any(text in page for text in ('Local Python calculation', 'sent to the local 
 page = page.replace('This explorer covers the matrix-completion part of the team’s work for GIRO 2026.',
                     'This explorer covers the matrix-completion part of the team’s work for GIRO 2026. The first visit downloads the browser Python runtime; later calculations run locally in your browser.')
 resource_links = '<a href="notebook.html">Read the notebook ↗</a>'
-for filename, label in SLIDES:
+for filename, label in SLIDES + EARLIER_SLIDES:
     if not (SITE / "resources" / filename).is_file():
         raise RuntimeError(f"Missing reviewed slide resource: {filename}")
     resource_links += f'<a href="resources/{filename}">{label} ↗</a>'
@@ -93,8 +98,8 @@ summary = summary.replace('The local browser preview uses the Python package.',
 summary = summary.replace('the unchanged research [notebook]', 'the conference [notebook]')
 summary = summary.replace('Validation and this unpublished local presentation use Codex assistance.',
                           'Browser presentation and additional validation used Codex assistance.')
-summary += "\n\nPublished slides (1 November 2026): " + " · ".join(
-    f"[{label}]({filename})" for filename, label in SLIDES
+summary += "\n\nCurrent and earlier slides (4 November 2026): " + " · ".join(
+    f"[{label}]({filename})" for filename, label in SLIDES + EARLIER_SLIDES
 ) + ". The [earlier D10 slides](GIRO_2026_D10_slides.pdf) remain available.\n"
 (SITE / "resources/technical-summary.md").write_text(summary, encoding="utf-8")
 shutil.copy2(LOCAL / "validation/general-backend-validation.json", SITE / "resources/numerical-validation.json")
@@ -127,7 +132,7 @@ with zipfile.ZipFile(SITE / "resources/local-python-demo.zip", "w", zipfile.ZIP_
         "docs/resources/completion-workflow.png",
         "docs/resources/missing-correlation-dependencies.png",
     ]
-    notebook_resources += ["docs/resources/" + filename for filename, _ in SLIDES]
+    notebook_resources += ["docs/resources/" + filename for filename, _ in SLIDES + EARLIER_SLIDES]
     for relative in notebook_resources:
         archive.write(REPO / relative, "vine-matrix-completion/" + relative)
     if notebook.exists() and not (LOCAL / "dist/research/notebook.ipynb").exists():
@@ -138,7 +143,7 @@ with zipfile.ZipFile(SITE / "resources/local-python-demo.zip", "w", zipfile.ZIP_
         "\nWorked notebook:\n"
         "Open vine-matrix-completion/notebooks/GIRO_2026_matrix_completion.ipynb in Jupyter.\n"
         'From vine-matrix-completion run: python -m pip install -e ".[plot]"\n'
-        "Its example data, dated D17 graph/matrix slides and earlier D10 slides are included. The older notebook is saved alongside it.\n"
+        "Its example data, current D35 slides, earlier D17 graph/matrix slides and D10 slides are included. The older notebook is saved alongside it.\n"
         "For the full repository and developer resources use https://github.com/Xinbin1011/vine-matrix-completion\n"
     )
     archive.writestr("START_HERE.txt", start_here + notebook_instructions)
