@@ -162,6 +162,8 @@
 .allowed-connections button{background:#fff;border:1px solid var(--line);padding:5px 8px;font-size:12px;margin:3px 7px 3px 0}
 .general-results .status.draft{background:#f5f6f2;border-color:#bac2b6;color:var(--ink)}
 .narrative-overview{padding-bottom:26px}
+.narrative-overview summary{font-size:14px;align-items:center}
+.narrative-overview .research-grid{margin-top:16px}
 .narrative-overview .research-grid article{padding-top:12px}
 .narrative-overview .research-grid h3{margin-bottom:7px}
 .narrative-overview .research-grid p{font-size:14px;line-height:1.7;margin-bottom:0}
