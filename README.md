@@ -15,9 +15,8 @@ Want to help improve it? [Add the project to Codex and contribute](#add-this-pro
 | --- | --- |
 | [Interactive demo](https://xinbin1011.github.io/vine-matrix-completion/) | Change inputs and inspect the calculation in your browser. Works when the project PC is switched off. |
 | [Read the conference notebook](https://xinbin1011.github.io/vine-matrix-completion/notebook.html) · [notebook source](notebooks/GIRO_2026_matrix_completion.ipynb) | Follow the workflow, function map and all four missing-correlation calculations using the Python package. |
-| [D35 slides · 4 Nov 2026](docs/resources/GIRO_2026_Matrix_Completion_D35_2026-11-04.pdf) · [D35 with construction · 4 Nov 2026](docs/resources/GIRO_2026_Matrix_Completion_D35_with_construction_2026-11-04.pdf) · [D35 reveal · 4 Nov 2026](docs/resources/GIRO_2026_Matrix_Completion_D35_reveal_2026-11-04.pdf) | Current slides, with construction and reveal alternatives. |
-| [Earlier D17 graph slides · 1 November 2026](docs/resources/GIRO_2026_Matrix_Completion_Graph_D17_2026-11-01.pdf) · [Earlier D17 matrix slides · 1 November 2026](docs/resources/GIRO_2026_Matrix_Completion_Matrix_D17_2026-11-01.pdf) | Earlier two-slide alternatives: graph or matrix presentation. |
-| [D10 slides (earlier version)](docs/resources/GIRO_2026_D10_slides.pdf) | Preserved at the original address so existing links still work. |
+| [Current GIRO 2026 slides · D35 (4 Nov 2026)](docs/resources/GIRO_2026_Matrix_Completion_D35_2026-11-04.pdf) | Main presentation version. |
+| [Slide archive](SLIDES_ARCHIVE.md) | Alternative slide layouts and earlier versions, kept for reference. |
 | [Local Python demo](https://xinbin1011.github.io/vine-matrix-completion/resources/local-python-demo.zip) | Download, extract and follow START_HERE.txt for the local-server alternative. |
 | [Previous release · 3 November 2026](https://xinbin1011.github.io/vine-matrix-completion/versions/2026-11-04-before-greedy-rule-clarification/) · [previous notebook](https://xinbin1011.github.io/vine-matrix-completion/versions/2026-11-04-before-greedy-rule-clarification/notebook.html) | Preserved before the greedy-rule clarification. |
 
